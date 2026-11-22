@@ -1,81 +1,144 @@
 import Link from "next/link";
-import LevelCard from "@/components/LevelCard";
-import { levels } from "@/lib/levels";
+import { DailyKanjiSpotlight } from "@/components/DailyKanjiSpotlight";
+import { levelCounts, spotlightKanji } from "@/lib/data.server";
+import { LEVELS, LEVEL_META, levelHref, practiceHref } from "@/lib/site";
 
-const features = [
+const tools = [
   {
-    title: "Hiragana & Katakana Trainer",
-    desc: "Master the Japanese syllabaries with stroke-order guides and drills.",
-    href: "/absolute-beginner",
+    title: "Kanji & vocabulary grids",
+    description: "Search, filter, and open any item from a level.",
+    href: "/jlpt/n5#explorer",
+    cta: "Browse N5 grid",
   },
   {
-    title: "Grammar Library",
-    desc: "Structured JLPT-graded grammar points with formation, usage, and examples.",
-    href: "/n5/grammar",
+    title: "Flashcards",
+    description: "Flip words to reveal readings, meanings, and parts of speech.",
+    href: practiceHref("flashcards", "N5"),
+    cta: "Start flashcards",
   },
   {
-    title: "SRS Flashcards",
-    desc: "Spaced repetition vocabulary and kanji deck to lock in long-term memory.",
-    href: "/n5/vocab",
+    title: "Quick quiz",
+    description: "Answer multiple-choice questions built from the same lists.",
+    href: practiceHref("quiz", "N5"),
+    cta: "Take a quiz",
   },
   {
-    title: "Full-Text Search",
-    desc: "Instantly search across grammar, vocabulary, and kanji by keyword.",
-    href: "/search",
+    title: "Text analyzer",
+    description: "See the script mix and JLPT kanji levels in any Japanese text.",
+    href: "/tools/text-analyzer/",
+    cta: "Analyze text",
+  },
+  {
+    title: "Kana converter",
+    description: "Convert romaji, hiragana, and katakana instantly.",
+    href: "/tools/kana-converter/",
+    cta: "Convert kana",
   },
 ];
 
 export default function HomePage() {
   return (
-    <>
-      <section className="mx-auto max-w-5xl px-4 py-24 text-center">
-        <h1 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">
-          Master Japanese,{" "}
-          <span className="text-blue-600 dark:text-blue-400">one step at a time</span>
-        </h1>
-        <p className="mx-auto mb-8 max-w-2xl text-lg text-zinc-600 dark:text-zinc-400">
-          From hiragana to JLPT N1 and beyond — TokyoLearn offers structured
-          lessons, vocabulary, kanji, and reading practice for every level.
+    <main className="mx-auto flex w-full max-w-6xl flex-col gap-16 px-5 py-12 sm:px-8 sm:py-16">
+      <section className="flex flex-col gap-6">
+        <p className="text-sm font-bold tracking-[0.2em] text-emerald-700 uppercase dark:text-emerald-400">
+          <span lang="ja">日本語を学ぼう</span> · Learn Japanese
         </p>
-        <div className="flex flex-wrap justify-center gap-4">
+        <h1 className="max-w-3xl text-5xl leading-[1.05] font-black tracking-tight text-slate-950 sm:text-7xl dark:text-white">
+          Japanese study that stays out of your way.
+        </h1>
+        <p className="max-w-2xl text-lg leading-relaxed text-slate-700 sm:text-xl dark:text-slate-300">
+          TokyoLearn gives you clean kanji and vocabulary lists for{" "}
+          <span className="font-bold text-slate-950 dark:text-white">JLPT N5 through N1</span>
+          , plus focused drills. No account, no ads, no server — everything loads as
+          static pages and your progress stays in your browser.
+        </p>
+        <div className="flex flex-wrap gap-3">
           <Link
-            href="/absolute-beginner"
-            className="rounded-lg bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
+            href={levelHref("N5")}
+            className="rounded-xl bg-emerald-700 px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-emerald-800 dark:bg-emerald-600 dark:hover:bg-emerald-500"
           >
-            Start Learning
+            Start with N5 →
           </Link>
           <Link
-            href="/placement"
-            className="rounded-lg border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-700 transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-800"
+            href="/jlpt/n5#explorer"
+            className="rounded-xl border border-slate-300 px-5 py-3 text-sm font-bold text-slate-800 transition-colors hover:border-emerald-600 dark:border-slate-700 dark:text-slate-200"
           >
-            Take Placement Quiz
+            Explore the data
           </Link>
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-4 pb-24">
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {levels.map((level) => (
-            <LevelCard key={level.level} level={level} />
-          ))}
+      <DailyKanjiSpotlight candidates={spotlightKanji} />
+
+      <section aria-labelledby="quick-start-heading" className="flex flex-col gap-6">
+        <div>
+          <h2
+            id="quick-start-heading"
+            className="text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl dark:text-white"
+          >
+            Quick start by level
+          </h2>
+          <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
+            Each level has its own searchable hub, flashcards, and quiz.
+          </p>
         </div>
+
+        <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {LEVELS.map((level) => {
+            const meta = LEVEL_META[level];
+            const counts = levelCounts(level);
+            return (
+              <li key={level}>
+                <Link
+                  href={levelHref(level)}
+                  className={`flex h-full flex-col gap-2 rounded-2xl border p-5 transition-colors hover:border-current ${meta.softAccent}`}
+                >
+                  <span className={`text-xs font-black tracking-widest ${meta.accent}`}>
+                    {level}
+                  </span>
+                  <span className="text-xl font-bold text-slate-950 dark:text-white">
+                    {meta.label}
+                  </span>
+                  <span className="text-sm text-slate-700 dark:text-slate-300">
+                    {meta.description}
+                  </span>
+                  <span className="mt-auto pt-2 text-xs font-semibold text-slate-600 dark:text-slate-400">
+                    {counts.kanji} kanji · {counts.vocab} words
+                  </span>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
       </section>
 
-      <section className="mx-auto max-w-5xl px-4 pb-24">
-        <h2 className="mb-8 text-2xl font-bold">What you&apos;ll find</h2>
-        <div className="grid gap-6 sm:grid-cols-2">
-          {features.map((f) => (
-            <Link
-              key={f.title}
-              href={f.href}
-              className="rounded-xl border border-zinc-200 bg-white p-6 transition-colors hover:border-zinc-300 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-zinc-700"
+      <section aria-labelledby="tools-heading" className="flex flex-col gap-6">
+        <h2
+          id="tools-heading"
+          className="text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl dark:text-white"
+        >
+          Study tools
+        </h2>
+        <ul className="grid gap-3 sm:grid-cols-3">
+          {tools.map((tool) => (
+            <li
+              key={tool.title}
+              className="flex flex-col gap-2 rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900"
             >
-              <h3 className="mb-2 font-semibold">{f.title}</h3>
-              <p className="text-sm text-zinc-600 dark:text-zinc-400">{f.desc}</p>
-            </Link>
+              <h3 className="text-base font-bold text-slate-950 dark:text-white">
+                {tool.title}
+              </h3>
+              <p className="text-sm text-slate-600 dark:text-slate-400">{tool.description}</p>
+              <Link
+                href={tool.href}
+                className="mt-auto pt-2 text-sm font-bold text-emerald-700 underline-offset-4 hover:underline dark:text-emerald-400"
+              >
+                {tool.cta} →
+              </Link>
+            </li>
           ))}
-        </div>
+        </ul>
       </section>
-    </>
+    </main>
   );
 }
