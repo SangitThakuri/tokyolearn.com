@@ -5,10 +5,11 @@ import { LEVELS, LEVEL_META, levelHref, practiceHref } from "@/lib/site";
 
 const tools = [
   {
-    title: "Past-paper practice",
-    description: "Original N5–N1 exam papers with bilingual answer explanations.",
+    title: "過去問題集 · Past-paper practice",
+    description:
+      "Original N5–N1 papers with timed exam mode, instant practice feedback, and bilingual explanations.",
     href: "/exams/",
-    cta: "Browse exam bank",
+    cta: "Browse 過去問題集",
   },
   {
     title: "Kanji & vocabulary grids",
@@ -70,6 +71,12 @@ export default function HomePage() {
             className="rounded-xl border border-slate-300 px-5 py-3 text-sm font-bold text-slate-800 transition-colors hover:border-emerald-600 dark:border-slate-700 dark:text-slate-200"
           >
             Explore the data
+          </Link>
+          <Link
+            href="/exams/"
+            className="rounded-xl border border-emerald-600 px-5 py-3 text-sm font-bold text-emerald-700 transition-colors hover:bg-emerald-50 dark:border-emerald-500 dark:text-emerald-400 dark:hover:bg-emerald-950/40"
+          >
+            <span lang="ja">過去問題集</span> · Past papers →
           </Link>
         </div>
       </section>

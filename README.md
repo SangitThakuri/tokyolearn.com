@@ -43,6 +43,7 @@ A successful build prints a route table and writes `out/index.html`, `out/404.ht
 - **2,383 kanji detail pages** at `/kanji/<character>` with readings, meanings, radicals, stroke counts, and examples
 - **Flashcards** at `/practice/flashcards` — kanji or vocabulary, Space to flip, `1`/`2`/`3` to grade, audio pronunciation, and per-level mastery progress
 - **Quizzes** at `/practice/quiz` — 10/20/50 questions, three question types, same-level distractors, streaks, and missed-item review
+- **過去問題集** at `/exams` — bilingual JLPT N5–N1 paper bank with level/section filters, 本番モード timed runs, 練習モード instant feedback, review screens, retry-missed drills, and best scores saved locally
 - **Text analyzer** at `/tools/text-analyzer` — script counts and estimated N5–N1 kanji distribution for pasted Japanese text
 - **Kana converter** at `/tools/kana-converter` — romaji ⇄ hiragana ⇄ katakana with one-click copy
 - An automatically generated `sitemap.xml` and a custom 404 page

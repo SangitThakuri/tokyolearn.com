@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ExamPaperView } from "@/components/exams/ExamPaperView";
+import { ExamSimulator } from "@/components/exams/ExamSimulator";
 import { allExamPapers, getExamPaper } from "@/lib/exams.server";
 import {
   LEVEL_META,
@@ -82,8 +82,9 @@ export default async function ExamPaperPage({
           {paper.title.ja}
         </h1>
         <p className="text-base leading-relaxed text-slate-700 dark:text-slate-300">
-          {paper.description.en} Answer all {paper.questions.length} questions,
-          then check your answers for Japanese and English explanations.
+          {paper.description.en} Take all {paper.questions.length} questions in
+          本番モード (Exam Mode) with a JLPT-paced countdown, or learn
+          question-by-question in 練習モード (Practice Mode).
         </p>
         <p className="text-sm text-slate-500 dark:text-slate-400">
           Sections: 文字・語彙 / 文法 / 読解
@@ -91,7 +92,7 @@ export default async function ExamPaperPage({
         </p>
       </header>
 
-      <ExamPaperView paper={paper} />
+      <ExamSimulator paper={paper} />
     </main>
   );
 }

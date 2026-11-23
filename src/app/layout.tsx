@@ -63,7 +63,8 @@ export default function RootLayout({
                   href="/exams/"
                   className="hover:text-emerald-700 dark:hover:text-emerald-400"
                 >
-                  Exams
+                  <span lang="ja">過去問題集</span>
+                  <span className="ml-1 hidden sm:inline">Exams</span>
                 </Link>
                 <Link
                   href={practiceHref("flashcards", "N5")}

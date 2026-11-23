@@ -3,6 +3,7 @@
  * keys and is exposed through useSyncExternalStore-compatible snapshots so
  * server rendering always sees a stable empty value.
  */
+import type { ExamResult } from "@/types/exam";
 import type { JlptLevel } from "@/types/japanese";
 import type { QuestionCount, QuizType, Rating, StudyMode } from "@/types/study";
 
@@ -23,16 +24,27 @@ export interface QuizResult {
   date: number;
 }
 
+export interface ExamProgress {
+  /** Best attempt per paper, keyed by paper id. */
+  best: Record<string, ExamResult>;
+  /** Number of completed attempts per paper. */
+  attempts: Record<string, number>;
+  /** Most recent attempts across all papers. */
+  recent: ExamResult[];
+}
+
 export interface StudyProgress {
   flashcards: Record<string, DeckProgress>;
   quizBest: Record<string, number>;
   quizHistory: QuizResult[];
+  exams: ExamProgress;
 }
 
 export const EMPTY_PROGRESS: StudyProgress = {
   flashcards: {},
   quizBest: {},
   quizHistory: [],
+  exams: { best: {}, attempts: {}, recent: [] },
 };
 
 const VALID_RATINGS: readonly Rating[] = ["again", "good", "mastered"];
@@ -68,7 +80,43 @@ function parse(raw: string | null): StudyProgress {
     const quizHistory = Array.isArray(value.quizHistory)
       ? (value.quizHistory.filter(isRecord).slice(0, 10) as unknown as QuizResult[])
       : [];
-    return { flashcards, quizBest, quizHistory };
+
+    const exams: ExamProgress = { best: {}, attempts: {}, recent: [] };
+    if (isRecord(value.exams)) {
+      if (isRecord(value.exams.best)) {
+        for (const [key, result] of Object.entries(value.exams.best)) {
+          if (
+            isRecord(result) &&
+            typeof result.paperId === "string" &&
+            typeof result.percent === "number"
+          ) {
+            exams.best[key] = {
+              ...(result as unknown as ExamResult),
+              scope: result.scope === "drill" ? "drill" : "full",
+            };
+          }
+        }
+      }
+      if (isRecord(value.exams.attempts)) {
+        for (const [key, count] of Object.entries(value.exams.attempts)) {
+          if (typeof count === "number") exams.attempts[key] = count;
+        }
+      }
+      if (Array.isArray(value.exams.recent)) {
+        exams.recent = value.exams.recent
+          .filter(
+            (result) =>
+              isRecord(result) && typeof result.paperId === "string",
+          )
+          .slice(0, 10)
+          .map((result) => ({
+            ...(result as unknown as ExamResult),
+            scope: result.scope === "drill" ? "drill" : "full",
+          }));
+      }
+    }
+
+    return { flashcards, quizBest, quizHistory, exams };
   } catch {
     return EMPTY_PROGRESS;
   }
@@ -174,6 +222,40 @@ export function recordQuizResult(result: QuizResult): void {
       [key]: Math.max(previousBest, result.correct),
     },
     quizHistory: [result, ...current.quizHistory].slice(0, 10),
+  });
+}
+
+/** One best score per exam paper, regardless of mode. */
+export function examResultKey(paperId: string): string {
+  return paperId;
+}
+
+export function recordExamResult(result: ExamResult): void {
+  const current = getProgressSnapshot();
+  const key = examResultKey(result.paperId);
+  const previous = current.exams.best[key];
+  const isBest =
+    result.scope === "full" &&
+    (!previous ||
+      result.percent > previous.percent ||
+      (result.percent === previous.percent && result.date > previous.date));
+
+  persist({
+    ...current,
+    exams: {
+      best:
+        result.scope === "full"
+          ? {
+              ...current.exams.best,
+              [key]: isBest ? result : (previous as ExamResult),
+            }
+          : current.exams.best,
+      attempts: {
+        ...current.exams.attempts,
+        [key]: (current.exams.attempts[key] ?? 0) + 1,
+      },
+      recent: [result, ...current.exams.recent].slice(0, 10),
+    },
   });
 }
 

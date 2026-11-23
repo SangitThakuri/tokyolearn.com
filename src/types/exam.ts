@@ -133,6 +133,52 @@ export const EXAM_QUESTION_TYPE_LABELS: Record<
   },
 };
 
+/** How the paper is being taken. */
+export type ExamMode = "exam" | "practice";
+
+/** The four chips offered on the exam hub (listening stays inside full mocks). */
+export type ExamSectionFilter = "all" | "vocab" | "grammar" | "reading";
+
+export const EXAM_SECTION_FILTERS: readonly {
+  value: ExamSectionFilter;
+  label: ExamLocalizedText;
+}[] = [
+  { value: "all", label: { ja: "全科目", en: "Full Mock" } },
+  { value: "vocab", label: EXAM_SECTION_LABELS.vocab },
+  { value: "grammar", label: EXAM_SECTION_LABELS.grammar },
+  { value: "reading", label: EXAM_SECTION_LABELS.reading },
+];
+
+export interface ExamSectionStat {
+  section: ExamSection;
+  correct: number;
+  total: number;
+  /** Percentage 0–100. */
+  accuracy: number;
+}
+
+/** Full paper attempts count toward best scores; drills do not. */
+export type ExamResultScope = "full" | "drill";
+
+/** One completed attempt, persisted in localStorage through study-progress. */
+export interface ExamResult {
+  paperId: string;
+  level: JlptLevel;
+  scope: ExamResultScope;
+  mode: ExamMode;
+  correct: number;
+  total: number;
+  /** Percentage 0–100, rounded to the nearest integer. */
+  percent: number;
+  /** Accuracy-based estimate against official JLPT pass marks. */
+  passed: boolean;
+  totalPassPercent: number;
+  sectionPassPercent: number;
+  sections: ExamSectionStat[];
+  missedQuestionIds: string[];
+  date: number;
+}
+
 /** Used by both the UI and the dataset validator. */
 export const EXAM_SECTION_FOR_TYPE: Record<ExamQuestionType, ExamSection> = {
   "kanji-reading": "vocab",

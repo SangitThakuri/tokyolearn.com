@@ -100,6 +100,8 @@ Seeded files:
 `npm run generate:exams` rebuilds `src/generated/exam-manifest.ts` from this
 directory. It runs automatically before `dev`, `build`, and `verify:data`, so
 adding a file here is all that is needed to publish another static exam page.
+The `/exams` simulator imports these files at build time; completion badges and
+best scores are stored in the browser under `tokyolearn:progress:v1`.
 
 ## Regenerate and verify
 
