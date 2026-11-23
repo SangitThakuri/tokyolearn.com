@@ -1,0 +1,94 @@
+{
+  "id": "weather",
+  "kind": "topic",
+  "title": { "ja": "天気", "en": "Weather" },
+  "description": {
+    "ja": "天気予報や日常会話で使う語。",
+    "en": "Words you will hear in forecasts and everyday conversation."
+  },
+  "icon": "天",
+  "category": "vocabulary",
+  "levels": ["N5", "N4"],
+  "items": [
+    {
+      "id": "weather",
+      "term": { "ja": "天気", "en": "weather" },
+      "reading": "てんき",
+      "romaji": "tenki",
+      "examples": [{ "ja": "いい天気ですね", "en": "Nice weather, isn't it?", "reading": "いいてんきですね" }]
+    },
+    {
+      "id": "sunny",
+      "term": { "ja": "晴れ", "en": "clear; sunny" },
+      "reading": "はれ",
+      "romaji": "hare",
+      "examples": [{ "ja": "明日は晴れです", "en": "Tomorrow will be sunny", "reading": "あしたははれです" }]
+    },
+    {
+      "id": "rain",
+      "term": { "ja": "雨", "en": "rain" },
+      "reading": "あめ",
+      "romaji": "ame",
+      "examples": [{ "ja": "雨が降っています", "en": "It is raining", "reading": "あめがふっています" }]
+    },
+    {
+      "id": "snow",
+      "term": { "ja": "雪", "en": "snow" },
+      "reading": "ゆき",
+      "romaji": "yuki",
+      "examples": [{ "ja": "雪が降る", "en": "It snows", "reading": "ゆきがふる" }]
+    },
+    {
+      "id": "cloudy",
+      "term": { "ja": "曇り", "en": "cloudy" },
+      "reading": "くもり",
+      "romaji": "kumori"
+    },
+    {
+      "id": "wind",
+      "term": { "ja": "風", "en": "wind" },
+      "reading": "かぜ",
+      "romaji": "kaze"
+    },
+    {
+      "id": "thunder",
+      "term": { "ja": "雷", "en": "thunder; lightning" },
+      "reading": "かみなり",
+      "romaji": "kaminari"
+    },
+    {
+      "id": "storm",
+      "term": { "ja": "嵐", "en": "storm" },
+      "reading": "あらし",
+      "romaji": "arashi"
+    },
+    {
+      "id": "cold",
+      "term": { "ja": "寒い", "en": "cold (weather)" },
+      "reading": "さむい",
+      "romaji": "samui",
+      "group": "adjectives"
+    },
+    {
+      "id": "hot",
+      "term": { "ja": "暑い", "en": "hot (weather)" },
+      "reading": "あつい",
+      "romaji": "atsui",
+      "group": "adjectives"
+    },
+    {
+      "id": "cool",
+      "term": { "ja": "涼しい", "en": "cool; refreshing" },
+      "reading": "すずしい",
+      "romaji": "suzushii",
+      "group": "adjectives"
+    },
+    {
+      "id": "warm",
+      "term": { "ja": "暖かい", "en": "warm" },
+      "reading": "あたたかい",
+      "romaji": "atatakai",
+      "group": "adjectives"
+    }
+  ]
+}

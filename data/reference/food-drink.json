@@ -1,0 +1,98 @@
+{
+  "id": "food-drink",
+  "kind": "topic",
+  "title": { "ja": "食べ物と飲み物", "en": "Food & Drink" },
+  "description": {
+    "ja": "食事や買い物に役立つ基本語彙。",
+    "en": "Everyday words for meals, groceries, and drinks."
+  },
+  "icon": "食",
+  "category": "vocabulary",
+  "levels": ["N5"],
+  "items": [
+    {
+      "id": "food",
+      "term": { "ja": "食べ物", "en": "food" },
+      "reading": "たべもの",
+      "romaji": "tabemono",
+      "group": "general"
+    },
+    {
+      "id": "drink",
+      "term": { "ja": "飲み物", "en": "drink" },
+      "reading": "のみもの",
+      "romaji": "nomimono",
+      "group": "general"
+    },
+    {
+      "id": "rice",
+      "term": { "ja": "米", "en": "rice" },
+      "reading": "こめ",
+      "romaji": "kome",
+      "group": "staples"
+    },
+    {
+      "id": "noodles",
+      "term": { "ja": "麺", "en": "noodles" },
+      "reading": "めん",
+      "romaji": "men",
+      "group": "staples"
+    },
+    {
+      "id": "fish",
+      "term": { "ja": "魚", "en": "fish" },
+      "reading": "さかな",
+      "romaji": "sakana",
+      "group": "protein"
+    },
+    {
+      "id": "meat",
+      "term": { "ja": "肉", "en": "meat" },
+      "reading": "にく",
+      "romaji": "niku",
+      "group": "protein"
+    },
+    {
+      "id": "vegetables",
+      "term": { "ja": "野菜", "en": "vegetables" },
+      "reading": "やさい",
+      "romaji": "yasai",
+      "group": "produce"
+    },
+    {
+      "id": "fruit",
+      "term": { "ja": "果物", "en": "fruit" },
+      "reading": "くだもの",
+      "romaji": "kudamono",
+      "group": "produce"
+    },
+    {
+      "id": "water",
+      "term": { "ja": "水", "en": "water" },
+      "reading": "みず",
+      "romaji": "mizu",
+      "group": "drinks"
+    },
+    {
+      "id": "tea",
+      "term": { "ja": "お茶", "en": "tea" },
+      "reading": "おちゃ",
+      "romaji": "ocha",
+      "group": "drinks"
+    },
+    {
+      "id": "coffee",
+      "term": { "ja": "コーヒー", "en": "coffee" },
+      "reading": "コーヒー",
+      "romaji": "koohii",
+      "group": "drinks"
+    },
+    {
+      "id": "milk",
+      "term": { "ja": "牛乳", "en": "milk" },
+      "reading": "ぎゅうにゅう",
+      "romaji": "gyuunyuu",
+      "group": "drinks"
+    }
+  ]
+}

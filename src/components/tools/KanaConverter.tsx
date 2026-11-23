@@ -14,8 +14,8 @@ const SCRIPTS: { value: Script; label: string; sample: string }[] = [
 
 export function KanaConverter() {
   const [text, setText] = useState("");
-  const [from, setFrom] = useState<Script>("romaji");
-  const [to, setTo] = useState<Script>("hiragana");
+  const [from, setFrom] = useState<Script>("hiragana");
+  const [to, setTo] = useState<Script>("katakana");
 
   const output = useMemo(() => {
     const trimmed = text.trim();

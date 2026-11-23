@@ -1,0 +1,80 @@
+{
+  "id": "professions",
+  "kind": "topic",
+  "title": { "ja": "職業", "en": "Professions" },
+  "description": {
+    "ja": "仕事と職業を表す語。",
+    "en": "Common jobs and occupations."
+  },
+  "icon": "職",
+  "category": "vocabulary",
+  "levels": ["N5", "N4"],
+  "items": [
+    {
+      "id": "doctor",
+      "term": { "ja": "医者", "en": "doctor" },
+      "reading": "いしゃ",
+      "romaji": "isha"
+    },
+    {
+      "id": "teacher",
+      "term": { "ja": "先生", "en": "teacher" },
+      "reading": "せんせい",
+      "romaji": "sensei"
+    },
+    {
+      "id": "student",
+      "term": { "ja": "学生", "en": "student" },
+      "reading": "がくせい",
+      "romaji": "gakusei"
+    },
+    {
+      "id": "office-worker",
+      "term": { "ja": "会社員", "en": "office worker" },
+      "reading": "かいしゃいん",
+      "romaji": "kaishain"
+    },
+    {
+      "id": "police-officer",
+      "term": { "ja": "警察官", "en": "police officer" },
+      "reading": "けいさつかん",
+      "romaji": "keisatsukan"
+    },
+    {
+      "id": "firefighter",
+      "term": { "ja": "消防士", "en": "firefighter" },
+      "reading": "しょうぼうし",
+      "romaji": "shouboushi"
+    },
+    {
+      "id": "chef",
+      "term": { "ja": "料理人", "en": "chef; cook" },
+      "reading": "りょうりにん",
+      "romaji": "ryourinin"
+    },
+    {
+      "id": "farmer",
+      "term": { "ja": "農家", "en": "farmer" },
+      "reading": "のうか",
+      "romaji": "nouka"
+    },
+    {
+      "id": "driver",
+      "term": { "ja": "運転手", "en": "driver" },
+      "reading": "うんてんしゅ",
+      "romaji": "untenshu"
+    },
+    {
+      "id": "singer",
+      "term": { "ja": "歌手", "en": "singer" },
+      "reading": "かしゅ",
+      "romaji": "kashu"
+    },
+    {
+      "id": "painter",
+      "term": { "ja": "画家", "en": "painter; artist" },
+      "reading": "がか",
+      "romaji": "gaka"
+    }
+  ]
+}

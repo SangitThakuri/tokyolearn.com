@@ -1,0 +1,85 @@
+{
+  "id": "body-parts",
+  "kind": "topic",
+  "title": { "ja": "体の部分", "en": "Body Parts" },
+  "description": {
+    "ja": "体の基本的な部分と読み方。",
+    "en": "Core vocabulary for parts of the body."
+  },
+  "icon": "体",
+  "category": "vocabulary",
+  "levels": ["N5"],
+  "items": [
+    {
+      "id": "head",
+      "term": { "ja": "頭", "en": "head" },
+      "reading": "あたま",
+      "romaji": "atama",
+      "examples": [{ "ja": "頭が痛い", "en": "I have a headache", "reading": "あたまがいたい" }]
+    },
+    {
+      "id": "face",
+      "term": { "ja": "顔", "en": "face" },
+      "reading": "かお",
+      "romaji": "kao",
+      "examples": [{ "ja": "顔を洗う", "en": "wash one's face", "reading": "かおをあらう" }]
+    },
+    {
+      "id": "eye",
+      "term": { "ja": "目", "en": "eye" },
+      "reading": "め",
+      "romaji": "me",
+      "examples": [{ "ja": "目が大きい", "en": "has big eyes", "reading": "めがおおきい" }]
+    },
+    {
+      "id": "ear",
+      "term": { "ja": "耳", "en": "ear" },
+      "reading": "みみ",
+      "romaji": "mimi"
+    },
+    {
+      "id": "nose",
+      "term": { "ja": "鼻", "en": "nose" },
+      "reading": "はな",
+      "romaji": "hana"
+    },
+    {
+      "id": "mouth",
+      "term": { "ja": "口", "en": "mouth" },
+      "reading": "くち",
+      "romaji": "kuchi"
+    },
+    {
+      "id": "hand",
+      "term": { "ja": "手", "en": "hand" },
+      "reading": "て",
+      "romaji": "te",
+      "examples": [{ "ja": "手を挙げる", "en": "raise a hand", "reading": "てをあげる" }]
+    },
+    {
+      "id": "foot",
+      "term": { "ja": "足", "en": "foot; leg" },
+      "reading": "あし",
+      "romaji": "ashi"
+    },
+    {
+      "id": "arm",
+      "term": { "ja": "腕", "en": "arm" },
+      "reading": "うで",
+      "romaji": "ude"
+    },
+    {
+      "id": "back",
+      "term": { "ja": "背中", "en": "back" },
+      "reading": "せなか",
+      "romaji": "senaka"
+    },
+    {
+      "id": "heart",
+      "term": { "ja": "心", "en": "heart; mind" },
+      "reading": "こころ",
+      "romaji": "kokoro",
+      "group": "abstract"
+    }
+  ]
+}

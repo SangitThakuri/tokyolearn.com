@@ -9,6 +9,10 @@ export interface ScriptCounts {
   kanji: number;
   hiragana: number;
   katakana: number;
+  /** ASCII letters and digits, including hepburn romaji. */
+  romaji: number;
+  /** Common Japanese and ASCII punctuation marks. */
+  punctuation: number;
   /** Characters in kana/kanji ranges, used as the denominator for percentages. */
   japanese: number;
 }
@@ -37,7 +41,7 @@ const CJK_EXTENSION_B_BOUNDARIES: [number, number][] = [
   [0x2f800, 0x2fa1f],
 ];
 
-function isKanji(char: string): boolean {
+export function isKanji(char: string): boolean {
   const code = char.codePointAt(0) ?? 0;
   if (code >= 0x4e00 && code <= 0x9fff) return true;
   return CJK_EXTENSION_B_BOUNDARIES.some(
@@ -55,6 +59,10 @@ function isKatakana(char: string): boolean {
   return code >= 0x30a1 && code <= 0x30ff;
 }
 
+/** Japanese punctuation plus the ASCII marks commonly pasted with text. */
+const PUNCTUATION =
+  /[、。，．！？!?,.;:・：「」『』（）()【】［］\[\]｛｝{}—ー～~…・]/;
+
 /**
  * Total characters excludes ASCII whitespace and newline characters so that
  * pasted paragraphs are not dominated by formatting.
@@ -68,6 +76,8 @@ export function analyzeText(
     kanji: 0,
     hiragana: 0,
     katakana: 0,
+    romaji: 0,
+    punctuation: 0,
     japanese: 0,
   };
   const levelOf = new Map<string, JlptLevel>();
@@ -105,6 +115,10 @@ export function analyzeText(
     } else if (isKatakana(char)) {
       counts.katakana++;
       counts.japanese++;
+    } else if (PUNCTUATION.test(char)) {
+      counts.punctuation++;
+    } else if (/[A-Za-z0-9]/.test(char)) {
+      counts.romaji++;
     }
   }
 

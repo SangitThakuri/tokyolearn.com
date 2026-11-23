@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { TOOLS } from "@/data/tools-catalog";
 import { allKanji } from "@/lib/data.server";
 import { allExamPapers } from "@/lib/exams.server";
 import {
@@ -44,20 +45,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: absoluteUrl("/tools/"),
       lastModified,
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: 0.8,
     },
-    {
-      url: absoluteUrl("/tools/text-analyzer/"),
+    ...TOOLS.map((tool) => ({
+      url: absoluteUrl(tool.path),
       lastModified,
-      changeFrequency: "monthly",
+      changeFrequency: "monthly" as const,
       priority: 0.7,
-    },
-    {
-      url: absoluteUrl("/tools/kana-converter/"),
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
+    })),
     {
       url: absoluteUrl("/exams/"),
       lastModified,

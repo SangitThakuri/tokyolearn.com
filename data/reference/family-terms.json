@@ -1,0 +1,98 @@
+{
+  "id": "family-terms",
+  "kind": "topic",
+  "title": { "ja": "家族", "en": "Family Terms" },
+  "description": {
+    "ja": "家族の呼び方と、呼びかけに使う丁寧な形。",
+    "en": "Family vocabulary, including polite forms used when speaking to someone."
+  },
+  "icon": "家",
+  "category": "vocabulary",
+  "levels": ["N5"],
+  "items": [
+    {
+      "id": "family",
+      "term": { "ja": "家族", "en": "family" },
+      "reading": "かぞく",
+      "romaji": "kazoku"
+    },
+    {
+      "id": "father",
+      "term": { "ja": "父", "en": "father" },
+      "reading": "ちち",
+      "romaji": "chichi",
+      "fields": [
+        { "label": { "ja": "呼びかけ", "en": "Addressing" }, "value": { "ja": "お父さん", "en": "otōsan" } }
+      ]
+    },
+    {
+      "id": "mother",
+      "term": { "ja": "母", "en": "mother" },
+      "reading": "はは",
+      "romaji": "haha",
+      "fields": [
+        { "label": { "ja": "呼びかけ", "en": "Addressing" }, "value": { "ja": "お母さん", "en": "okāsan" } }
+      ]
+    },
+    {
+      "id": "older-brother",
+      "term": { "ja": "兄", "en": "older brother" },
+      "reading": "あに",
+      "romaji": "ani",
+      "fields": [
+        { "label": { "ja": "呼びかけ", "en": "Addressing" }, "value": { "ja": "お兄さん", "en": "oniisan" } }
+      ]
+    },
+    {
+      "id": "older-sister",
+      "term": { "ja": "姉", "en": "older sister" },
+      "reading": "あね",
+      "romaji": "ane",
+      "fields": [
+        { "label": { "ja": "呼びかけ", "en": "Addressing" }, "value": { "ja": "お姉さん", "en": "oneesan" } }
+      ]
+    },
+    {
+      "id": "younger-brother",
+      "term": { "ja": "弟", "en": "younger brother" },
+      "reading": "おとうと",
+      "romaji": "otouto"
+    },
+    {
+      "id": "younger-sister",
+      "term": { "ja": "妹", "en": "younger sister" },
+      "reading": "いもうと",
+      "romaji": "imouto"
+    },
+    {
+      "id": "grandfather",
+      "term": { "ja": "祖父", "en": "grandfather" },
+      "reading": "そふ",
+      "romaji": "sofu"
+    },
+    {
+      "id": "grandmother",
+      "term": { "ja": "祖母", "en": "grandmother" },
+      "reading": "そぼ",
+      "romaji": "sobo"
+    },
+    {
+      "id": "husband",
+      "term": { "ja": "夫", "en": "husband" },
+      "reading": "おっと",
+      "romaji": "otto"
+    },
+    {
+      "id": "wife",
+      "term": { "ja": "妻", "en": "wife" },
+      "reading": "つま",
+      "romaji": "tsuma"
+    },
+    {
+      "id": "child",
+      "term": { "ja": "子供", "en": "child" },
+      "reading": "こども",
+      "romaji": "kodomo"
+    }
+  ]
+}

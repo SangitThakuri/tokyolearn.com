@@ -1,0 +1,103 @@
+{
+  "id": "counters",
+  "kind": "topic",
+  "title": { "ja": "助数詞", "en": "Counters" },
+  "description": {
+    "ja": "ものや人、回数を数えるときの語。",
+    "en": "Words used to count people, objects, time, and events."
+  },
+  "icon": "数",
+  "category": "grammar",
+  "levels": ["N5", "N4"],
+  "items": [
+    {
+      "id": "general-ko",
+      "term": { "ja": "個", "en": "general counter for objects" },
+      "reading": "こ",
+      "romaji": "ko",
+      "group": "objects",
+      "examples": [{ "ja": "りんご三つ", "en": "three apples", "reading": "りんごみっつ" }]
+    },
+    {
+      "id": "people-nin",
+      "term": { "ja": "人", "en": "counter for people" },
+      "reading": "にん",
+      "romaji": "nin",
+      "group": "people",
+      "detail": { "ja": "1人・2人は例外読み。", "en": "One and two people have irregular readings." },
+      "examples": [{ "ja": "三人の学生", "en": "three students", "reading": "さんにんのがくせい" }]
+    },
+    {
+      "id": "long-things-hon",
+      "term": { "ja": "本", "en": "counter for long, thin things" },
+      "reading": "ほん",
+      "romaji": "hon",
+      "group": "objects",
+      "examples": [{ "ja": "本を二冊", "en": "two books", "reading": "ほんをにさつ" }]
+    },
+    {
+      "id": "flat-things-mai",
+      "term": { "ja": "枚", "en": "counter for flat things" },
+      "reading": "まい",
+      "romaji": "mai",
+      "group": "objects",
+      "examples": [{ "ja": "紙五枚", "en": "five sheets of paper", "reading": "かみごまい" }]
+    },
+    {
+      "id": "bound-books-satsu",
+      "term": { "ja": "冊", "en": "counter for bound books" },
+      "reading": "さつ",
+      "romaji": "satsu",
+      "group": "objects",
+      "examples": [{ "ja": "雑誌一冊", "en": "one magazine", "reading": "ざっしいっさつ" }]
+    },
+    {
+      "id": "small-animals-hiki",
+      "term": { "ja": "匹", "en": "counter for small animals" },
+      "reading": "ひき",
+      "romaji": "hiki",
+      "group": "animals",
+      "examples": [{ "ja": "猫一匹", "en": "one cat", "reading": "ねこいっぴき" }]
+    },
+    {
+      "id": "large-animals-tou",
+      "term": { "ja": "頭", "en": "counter for large animals" },
+      "reading": "とう",
+      "romaji": "tou",
+      "group": "animals",
+      "examples": [{ "ja": "牛二頭", "en": "two cows", "reading": "うしにとう" }]
+    },
+    {
+      "id": "machines-dai",
+      "term": { "ja": "台", "en": "counter for machines and vehicles" },
+      "reading": "だい",
+      "romaji": "dai",
+      "group": "objects",
+      "examples": [{ "ja": "車一台", "en": "one car", "reading": "くるまいちだい" }]
+    },
+    {
+      "id": "times-kai",
+      "term": { "ja": "回", "en": "counter for occurrences" },
+      "reading": "かい",
+      "romaji": "kai",
+      "group": "events",
+      "examples": [{ "ja": "三回行った", "en": "I went three times", "reading": "さんかいった" }]
+    },
+    {
+      "id": "age-sai",
+      "term": { "ja": "歳", "en": "counter for age" },
+      "reading": "さい",
+      "romaji": "sai",
+      "group": "time",
+      "examples": [{ "ja": "二十歳", "en": "twenty years old", "reading": "はたち" }]
+    },
+    {
+      "id": "yen-en",
+      "term": { "ja": "円", "en": "Japanese yen" },
+      "reading": "えん",
+      "romaji": "en",
+      "group": "money",
+      "examples": [{ "ja": "千円", "en": "one thousand yen", "reading": "せんえん" }]
+    }
+  ]
+}

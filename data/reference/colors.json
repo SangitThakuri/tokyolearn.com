@@ -1,0 +1,114 @@
+{
+  "id": "colors",
+  "kind": "topic",
+  "title": { "ja": "色", "en": "Colors" },
+  "description": {
+    "ja": "よく使う色とその読み方、例文つき。",
+    "en": "Everyday colors with readings and short examples."
+  },
+  "icon": "色",
+  "category": "vocabulary",
+  "levels": ["N5"],
+  "items": [
+    {
+      "id": "red",
+      "term": { "ja": "赤", "en": "red" },
+      "reading": "あか",
+      "romaji": "aka",
+      "group": "basic",
+      "examples": [
+        { "ja": "赤い花", "en": "a red flower", "reading": "あかいはな" }
+      ]
+    },
+    {
+      "id": "blue",
+      "term": { "ja": "青", "en": "blue" },
+      "reading": "あお",
+      "romaji": "ao",
+      "group": "basic",
+      "examples": [
+        { "ja": "青い空", "en": "a blue sky", "reading": "あおいそら" }
+      ]
+    },
+    {
+      "id": "white",
+      "term": { "ja": "白", "en": "white" },
+      "reading": "しろ",
+      "romaji": "shiro",
+      "group": "basic",
+      "examples": [
+        { "ja": "白い雲", "en": "a white cloud", "reading": "しろいくも" }
+      ]
+    },
+    {
+      "id": "black",
+      "term": { "ja": "黒", "en": "black" },
+      "reading": "くろ",
+      "romaji": "kuro",
+      "group": "basic",
+      "examples": [
+        { "ja": "黒い猫", "en": "a black cat", "reading": "くろいねこ" }
+      ]
+    },
+    {
+      "id": "green",
+      "term": { "ja": "緑", "en": "green" },
+      "reading": "みどり",
+      "romaji": "midori",
+      "group": "basic",
+      "examples": [
+        { "ja": "緑の茶", "en": "green tea", "reading": "みどりのちゃ" }
+      ]
+    },
+    {
+      "id": "yellow",
+      "term": { "ja": "黄色", "en": "yellow" },
+      "reading": "きいろ",
+      "romaji": "kiiro",
+      "group": "basic",
+      "examples": [
+        { "ja": "黄色い傘", "en": "a yellow umbrella", "reading": "きいろいかさ" }
+      ]
+    },
+    {
+      "id": "brown",
+      "term": { "ja": "茶色", "en": "brown" },
+      "reading": "ちゃいろ",
+      "romaji": "chairo",
+      "group": "derived",
+      "examples": [
+        { "ja": "茶色の靴", "en": "brown shoes", "reading": "ちゃいろのくつ" }
+      ]
+    },
+    {
+      "id": "purple",
+      "term": { "ja": "紫", "en": "purple" },
+      "reading": "むらさき",
+      "romaji": "murasaki",
+      "group": "derived",
+      "examples": [
+        { "ja": "紫色の服", "en": "purple clothes", "reading": "むらさきいろのふく" }
+      ]
+    },
+    {
+      "id": "orange",
+      "term": { "ja": "橙色", "en": "orange (color)" },
+      "reading": "だいだいいろ",
+      "romaji": "daidaiiro",
+      "group": "derived",
+      "examples": [
+        { "ja": "橙色の夕日", "en": "an orange sunset", "reading": "だいだいいろのゆうひ" }
+      ]
+    },
+    {
+      "id": "gray",
+      "term": { "ja": "灰色", "en": "gray" },
+      "reading": "はいいろ",
+      "romaji": "haiiro",
+      "group": "derived",
+      "examples": [
+        { "ja": "灰色の空", "en": "a gray sky", "reading": "はいいろのそら" }
+      ]
+    }
+  ]
+}

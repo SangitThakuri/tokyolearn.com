@@ -1,0 +1,133 @@
+{
+  "id": "time-directions",
+  "kind": "topic",
+  "title": { "ja": "時間と方位", "en": "Time & Directions" },
+  "description": {
+    "ja": "時刻・日付・方角を表す基礎語彙。",
+    "en": "Foundational words for time, days, and directions."
+  },
+  "icon": "方",
+  "category": "vocabulary",
+  "levels": ["N5"],
+  "items": [
+    {
+      "id": "now",
+      "term": { "ja": "今", "en": "now" },
+      "reading": "いま",
+      "romaji": "ima",
+      "group": "time"
+    },
+    {
+      "id": "today",
+      "term": { "ja": "今日", "en": "today" },
+      "reading": "きょう",
+      "romaji": "kyou",
+      "group": "time"
+    },
+    {
+      "id": "tomorrow",
+      "term": { "ja": "明日", "en": "tomorrow" },
+      "reading": "あした",
+      "romaji": "ashita",
+      "group": "time"
+    },
+    {
+      "id": "yesterday",
+      "term": { "ja": "昨日", "en": "yesterday" },
+      "reading": "きのう",
+      "romaji": "kinou",
+      "group": "time"
+    },
+    {
+      "id": "morning",
+      "term": { "ja": "朝", "en": "morning" },
+      "reading": "あさ",
+      "romaji": "asa",
+      "group": "time"
+    },
+    {
+      "id": "noon",
+      "term": { "ja": "昼", "en": "daytime; noon" },
+      "reading": "ひる",
+      "romaji": "hiru",
+      "group": "time"
+    },
+    {
+      "id": "night",
+      "term": { "ja": "夜", "en": "night" },
+      "reading": "よる",
+      "romaji": "yoru",
+      "group": "time"
+    },
+    {
+      "id": "up",
+      "term": { "ja": "上", "en": "up; above" },
+      "reading": "うえ",
+      "romaji": "ue",
+      "group": "direction"
+    },
+    {
+      "id": "down",
+      "term": { "ja": "下", "en": "down; below" },
+      "reading": "した",
+      "romaji": "shita",
+      "group": "direction"
+    },
+    {
+      "id": "left",
+      "term": { "ja": "左", "en": "left" },
+      "reading": "ひだり",
+      "romaji": "hidari",
+      "group": "direction"
+    },
+    {
+      "id": "right",
+      "term": { "ja": "右", "en": "right" },
+      "reading": "みぎ",
+      "romaji": "migi",
+      "group": "direction"
+    },
+    {
+      "id": "front",
+      "term": { "ja": "前", "en": "front; before" },
+      "reading": "まえ",
+      "romaji": "mae",
+      "group": "direction"
+    },
+    {
+      "id": "back-position",
+      "term": { "ja": "後", "en": "back; after" },
+      "reading": "うしろ",
+      "romaji": "ushiro",
+      "group": "direction"
+    },
+    {
+      "id": "east",
+      "term": { "ja": "東", "en": "east" },
+      "reading": "ひがし",
+      "romaji": "higashi",
+      "group": "compass"
+    },
+    {
+      "id": "west",
+      "term": { "ja": "西", "en": "west" },
+      "reading": "にし",
+      "romaji": "nishi",
+      "group": "compass"
+    },
+    {
+      "id": "south",
+      "term": { "ja": "南", "en": "south" },
+      "reading": "みなみ",
+      "romaji": "minami",
+      "group": "compass"
+    },
+    {
+      "id": "north",
+      "term": { "ja": "北", "en": "north" },
+      "reading": "きた",
+      "romaji": "kita",
+      "group": "compass"
+    }
+  ]
+}

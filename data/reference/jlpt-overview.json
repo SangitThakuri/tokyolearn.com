@@ -1,0 +1,181 @@
+{
+  "id": "jlpt-overview",
+  "kind": "jlpt-overview",
+  "title": { "ja": "JLPT 概要", "en": "JLPT Overview" },
+  "description": {
+    "ja": "各級の配点・合格点と試験日程。",
+    "en": "Official scoring sections, pass marks, and test windows for every JLPT level."
+  },
+  "icon": "級",
+  "category": "exam",
+  "levels": ["N5", "N4", "N3", "N2", "N1"],
+  "levelsData": [
+    {
+      "level": "N5",
+      "label": { "ja": "日本語能力試験 N5", "en": "Japanese-Language Proficiency Test N5" },
+      "description": {
+        "ja": "基礎的な日本語の理解。",
+        "en": "Basic Japanese needed for everyday situations."
+      },
+      "totalMax": 180,
+      "totalPass": 80,
+      "sections": [
+        {
+          "id": "language-reading",
+          "label": { "ja": "言語知識（文字・語彙・文法）・読解", "en": "Language Knowledge (Vocabulary/Grammar) · Reading" },
+          "max": 120,
+          "min": 38
+        },
+        {
+          "id": "listening",
+          "label": { "ja": "聴解", "en": "Listening" },
+          "max": 60,
+          "min": 19
+        }
+      ],
+      "focus": [
+        { "ja": "ひらがな・カタカナ", "en": "Hiragana and katakana" },
+        { "ja": "基礎漢字と語彙", "en": "Core kanji and vocabulary" },
+        { "ja": "簡単な会話", "en": "Simple conversations" }
+      ]
+    },
+    {
+      "level": "N4",
+      "label": { "ja": "日本語能力試験 N4", "en": "Japanese-Language Proficiency Test N4" },
+      "description": {
+        "ja": "日常生活の場面を理解する。",
+        "en": "Everyday conversations and short written passages."
+      },
+      "totalMax": 180,
+      "totalPass": 90,
+      "sections": [
+        {
+          "id": "language-reading",
+          "label": { "ja": "言語知識（文字・語彙・文法）・読解", "en": "Language Knowledge (Vocabulary/Grammar) · Reading" },
+          "max": 120,
+          "min": 38
+        },
+        {
+          "id": "listening",
+          "label": { "ja": "聴解", "en": "Listening" },
+          "max": 60,
+          "min": 19
+        }
+      ],
+      "focus": [
+        { "ja": "よく使う漢字", "en": "Common kanji" },
+        { "ja": "基本的な文法", "en": "Foundational grammar" },
+        { "ja": "短い文章", "en": "Short passages" }
+      ]
+    },
+    {
+      "level": "N3",
+      "label": { "ja": "日本語能力試験 N3", "en": "Japanese-Language Proficiency Test N3" },
+      "description": {
+        "ja": "少し複雑な文章と会話を理解する。",
+        "en": "Intermediate reading and listening with nuance and context."
+      },
+      "totalMax": 180,
+      "totalPass": 95,
+      "sections": [
+        {
+          "id": "language-knowledge",
+          "label": { "ja": "言語知識（文字・語彙・文法）", "en": "Language Knowledge (Vocabulary/Grammar)" },
+          "max": 60,
+          "min": 19
+        },
+        {
+          "id": "reading",
+          "label": { "ja": "読解", "en": "Reading" },
+          "max": 60,
+          "min": 19
+        },
+        {
+          "id": "listening",
+          "label": { "ja": "聴解", "en": "Listening" },
+          "max": 60,
+          "min": 19
+        }
+      ],
+      "focus": [
+        { "ja": "文脈による使い分け", "en": "Choosing words by context" },
+        { "ja": "中級文法", "en": "Intermediate grammar" },
+        { "ja": "やや長い文章", "en": "Longer passages" }
+      ]
+    },
+    {
+      "level": "N2",
+      "label": { "ja": "日本語能力試験 N2", "en": "Japanese-Language Proficiency Test N2" },
+      "description": {
+        "ja": "新聞やビジネス文書も読めるレベル。",
+        "en": "News, opinion pieces, and business-level Japanese."
+      },
+      "totalMax": 180,
+      "totalPass": 90,
+      "sections": [
+        {
+          "id": "language-knowledge",
+          "label": { "ja": "言語知識（文字・語彙・文法）", "en": "Language Knowledge (Vocabulary/Grammar)" },
+          "max": 60,
+          "min": 19
+        },
+        {
+          "id": "reading",
+          "label": { "ja": "読解", "en": "Reading" },
+          "max": 60,
+          "min": 19
+        },
+        {
+          "id": "listening",
+          "label": { "ja": "聴解", "en": "Listening" },
+          "max": 60,
+          "min": 19
+        }
+      ],
+      "focus": [
+        { "ja": "上級に近い語彙", "en": "Upper-intermediate vocabulary" },
+        { "ja": "論理的な文章", "en": "Logical, opinion-based texts" },
+        { "ja": "実務会話", "en": "Practical spoken Japanese" }
+      ]
+    },
+    {
+      "level": "N1",
+      "label": { "ja": "日本語能力試験 N1", "en": "Japanese-Language Proficiency Test N1" },
+      "description": {
+        "ja": "専門的・学術的な日本語を使いこなす。",
+        "en": "Advanced, academic, and professional-level Japanese."
+      },
+      "totalMax": 180,
+      "totalPass": 100,
+      "sections": [
+        {
+          "id": "language-knowledge",
+          "label": { "ja": "言語知識（文字・語彙・文法）", "en": "Language Knowledge (Vocabulary/Grammar)" },
+          "max": 60,
+          "min": 19
+        },
+        {
+          "id": "reading",
+          "label": { "ja": "読解", "en": "Reading" },
+          "max": 60,
+          "min": 19
+        },
+        {
+          "id": "listening",
+          "label": { "ja": "聴解", "en": "Listening" },
+          "max": 60,
+          "min": 19
+        }
+      ],
+      "focus": [
+        { "ja": "文学・論説文", "en": "Literary and academic texts" },
+        { "ja": "高度な文法", "en": "Advanced grammar" },
+        { "ja": "長時間の聴解", "en": "Extended listening" }
+      ]
+    }
+  ],
+  "examWindows": [
+    { "year": 2026, "month": 7, "day": 5, "official": true },
+    { "year": 2026, "month": 12, "day": 6, "official": true }
+  ]
+}

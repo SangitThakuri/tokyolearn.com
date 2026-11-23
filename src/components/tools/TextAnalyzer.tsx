@@ -15,25 +15,41 @@ const SCRIPT_CARDS: {
   key: keyof Omit<ScriptCounts, "total" | "japanese">;
   label: string;
   language?: "ja";
+  basis: "japanese" | "total";
   className: string;
 }[] = [
   {
     key: "kanji",
     label: "Kanji",
     language: "ja",
+    basis: "japanese",
     className: "border-emerald-200 bg-emerald-50 dark:border-emerald-900 dark:bg-emerald-950/40",
   },
   {
     key: "hiragana",
     label: "Hiragana",
     language: "ja",
+    basis: "japanese",
     className: "border-sky-200 bg-sky-50 dark:border-sky-900 dark:bg-sky-950/40",
   },
   {
     key: "katakana",
     label: "Katakana",
     language: "ja",
+    basis: "japanese",
     className: "border-amber-200 bg-amber-50 dark:border-amber-900 dark:bg-amber-950/40",
+  },
+  {
+    key: "romaji",
+    label: "Romaji / ASCII",
+    basis: "total",
+    className: "border-violet-200 bg-violet-50 dark:border-violet-900 dark:bg-violet-950/40",
+  },
+  {
+    key: "punctuation",
+    label: "Punctuation",
+    basis: "total",
+    className: "border-rose-200 bg-rose-50 dark:border-rose-900 dark:bg-rose-950/40",
   },
 ];
 
@@ -128,7 +144,7 @@ export function TextAnalyzer() {
             <h2 className="text-lg font-bold text-slate-950 dark:text-white">
               Character counts
             </h2>
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               <div className="rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900">
                 <p className="text-3xl font-black text-slate-950 dark:text-white">
                   {analysis.counts.total}
@@ -155,8 +171,13 @@ export function TextAnalyzer() {
                     {card.label}
                   </p>
                   <p className="mt-1 text-xs text-slate-600 dark:text-slate-400">
-                    {percent(analysis.counts[card.key], analysis.counts.japanese)}%
-                    of Japanese characters
+                    {percent(
+                      analysis.counts[card.key],
+                      card.basis === "japanese"
+                        ? analysis.counts.japanese
+                        : analysis.counts.total,
+                    )}
+                    % of {card.basis === "japanese" ? "Japanese" : "all"} characters
                   </p>
                 </div>
               ))}

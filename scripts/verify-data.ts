@@ -25,6 +25,12 @@ import type {
   ExamScrambledSentence,
   ExamSection,
 } from "../src/types/exam";
+import type {
+  JlptOverviewDataset,
+  LocalizedLabel,
+  ReferenceDataset,
+  TopicReferenceDataset,
+} from "../src/types/reference";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const LEVELS: readonly JlptLevel[] = ["N5", "N4", "N3", "N2", "N1"];
@@ -315,6 +321,235 @@ function assertExamPaper(value: unknown, file: string, id: string): asserts valu
   );
 }
 
+const REFERENCE_CATEGORIES = ["basics", "vocabulary", "grammar", "exam"] as const;
+const SCORING_SECTION_IDS = [
+  "language-knowledge",
+  "reading",
+  "listening",
+  "language-reading",
+] as const;
+
+function assertLocalizedLabel(
+  value: unknown,
+  where: string,
+): asserts value is LocalizedLabel {
+  if (!isRecord(value)) throw new Error(`${where} must be an object`);
+  for (const key of ["ja", "en"] as const) {
+    if (typeof value[key] !== "string" || value[key].length === 0) {
+      throw new Error(`${where}.${key} must be a non-empty string`);
+    }
+  }
+}
+
+function assertReferenceBase(value: Record<string, unknown>, where: string): void {
+  if (typeof value.id !== "string" || value.id.length === 0) {
+    throw new Error(`${where}.id must be a non-empty string`);
+  }
+  assertLocalizedLabel(value.title, `${where}.title`);
+  assertLocalizedLabel(value.description, `${where}.description`);
+  if (typeof value.icon !== "string" || value.icon.length === 0) {
+    throw new Error(`${where}.icon must be a non-empty string`);
+  }
+  if (
+    !REFERENCE_CATEGORIES.includes(
+      value.category as (typeof REFERENCE_CATEGORIES)[number],
+    )
+  ) {
+    throw new Error(`${where}.category is not a supported reference category`);
+  }
+  if (value.levels !== undefined) {
+    if (
+      !Array.isArray(value.levels) ||
+      !value.levels.every((level) => (LEVELS as readonly string[]).includes(level))
+    ) {
+      throw new Error(`${where}.levels must contain only N5–N1 values`);
+    }
+  }
+}
+
+function assertReferenceItem(value: unknown, where: string): void {
+  if (!isRecord(value)) throw new Error(`${where} must be an object`);
+  if (typeof value.id !== "string" || value.id.length === 0) {
+    throw new Error(`${where}.id must be a non-empty string`);
+  }
+  assertLocalizedLabel(value.term, `${where}.term`);
+
+  for (const key of ["reading", "romaji", "group"] as const) {
+    if (value[key] !== undefined && typeof value[key] !== "string") {
+      throw new Error(`${where}.${key} must be a string when present`);
+    }
+  }
+  if (value.detail !== undefined) {
+    assertLocalizedLabel(value.detail, `${where}.detail`);
+  }
+  if (value.tags !== undefined && !isStringArray(value.tags)) {
+    throw new Error(`${where}.tags must be a string array`);
+  }
+
+  if (value.fields !== undefined) {
+    if (!Array.isArray(value.fields)) {
+      throw new Error(`${where}.fields must be an array`);
+    }
+    value.fields.forEach((field, index) => {
+      const fieldWhere = `${where}.fields[${index}]`;
+      if (!isRecord(field)) throw new Error(`${fieldWhere} must be an object`);
+      assertLocalizedLabel(field.label, `${fieldWhere}.label`);
+      assertLocalizedLabel(field.value, `${fieldWhere}.value`);
+    });
+  }
+
+  if (value.examples !== undefined) {
+    if (!Array.isArray(value.examples)) {
+      throw new Error(`${where}.examples must be an array`);
+    }
+    value.examples.forEach((example, index) => {
+      const exampleWhere = `${where}.examples[${index}]`;
+      assertLocalizedLabel(example, exampleWhere);
+      if (
+        isRecord(example) &&
+        example.reading !== undefined &&
+        typeof example.reading !== "string"
+      ) {
+        throw new Error(`${exampleWhere}.reading must be a string when present`);
+      }
+    });
+  }
+}
+
+function assertTopicReferenceDataset(
+  value: unknown,
+  where: string,
+): asserts value is TopicReferenceDataset {
+  if (!isRecord(value)) throw new Error(`${where} must contain an object`);
+  assertReferenceBase(value, where);
+  if (!Array.isArray(value.items) || value.items.length === 0) {
+    throw new Error(`${where}.items must contain at least one entry`);
+  }
+  const ids = new Set<string>();
+  value.items.forEach((item, index) => {
+    const itemWhere = `${where}.items[${index}]`;
+    assertReferenceItem(item, itemWhere);
+    if (isRecord(item)) {
+      const id = item.id as string;
+      if (ids.has(id)) throw new Error(`${itemWhere}.id is duplicated`);
+      ids.add(id);
+    }
+  });
+}
+
+function assertJlptOverviewDataset(
+  value: unknown,
+  where: string,
+): asserts value is JlptOverviewDataset {
+  if (!isRecord(value)) throw new Error(`${where} must contain an object`);
+  assertReferenceBase(value, where);
+  if (!Array.isArray(value.levelsData) || value.levelsData.length !== LEVELS.length) {
+    throw new Error(`${where}.levelsData must contain one entry per JLPT level`);
+  }
+
+  const seenLevels = new Set<string>();
+  value.levelsData.forEach((rawLevel, index) => {
+    const levelWhere = `${where}.levelsData[${index}]`;
+    if (!isRecord(rawLevel)) throw new Error(`${levelWhere} must be an object`);
+    if (!(LEVELS as readonly string[]).includes(rawLevel.level as string)) {
+      throw new Error(`${levelWhere}.level must be N5–N1`);
+    }
+    const level = rawLevel.level as string;
+    if (seenLevels.has(level)) throw new Error(`${levelWhere}.level is duplicated`);
+    seenLevels.add(level);
+
+    assertLocalizedLabel(rawLevel.label, `${levelWhere}.label`);
+    assertLocalizedLabel(rawLevel.description, `${levelWhere}.description`);
+
+    if (
+      typeof rawLevel.totalMax !== "number" ||
+      rawLevel.totalMax <= 0 ||
+      typeof rawLevel.totalPass !== "number" ||
+      rawLevel.totalPass <= 0 ||
+      rawLevel.totalPass > rawLevel.totalMax
+    ) {
+      throw new Error(`${levelWhere}: invalid total maximum or pass mark`);
+    }
+
+    if (!Array.isArray(rawLevel.sections) || rawLevel.sections.length === 0) {
+      throw new Error(`${levelWhere}.sections must not be empty`);
+    }
+    const sectionIds = new Set<string>();
+    rawLevel.sections.forEach((rawSection, sectionIndex) => {
+      const sectionWhere = `${levelWhere}.sections[${sectionIndex}]`;
+      if (!isRecord(rawSection)) throw new Error(`${sectionWhere} must be an object`);
+      if (
+        !SCORING_SECTION_IDS.includes(
+          rawSection.id as (typeof SCORING_SECTION_IDS)[number],
+        )
+      ) {
+        throw new Error(`${sectionWhere}.id is not a supported JLPT section`);
+      }
+      const id = rawSection.id as string;
+      if (sectionIds.has(id)) throw new Error(`${sectionWhere}.id is duplicated`);
+      sectionIds.add(id);
+      assertLocalizedLabel(rawSection.label, `${sectionWhere}.label`);
+      if (
+        typeof rawSection.max !== "number" ||
+        rawSection.max <= 0 ||
+        typeof rawSection.min !== "number" ||
+        rawSection.min < 0 ||
+        rawSection.min > rawSection.max
+      ) {
+        throw new Error(`${sectionWhere}: invalid maximum or minimum mark`);
+      }
+    });
+
+    if (!Array.isArray(rawLevel.focus) || rawLevel.focus.length === 0) {
+      throw new Error(`${levelWhere}.focus must not be empty`);
+    }
+    rawLevel.focus.forEach((focus, focusIndex) =>
+      assertLocalizedLabel(focus, `${levelWhere}.focus[${focusIndex}]`),
+    );
+  });
+
+  if (!Array.isArray(value.examWindows) || value.examWindows.length === 0) {
+    throw new Error(`${where}.examWindows must not be empty`);
+  }
+  value.examWindows.forEach((seed, index) => {
+    const seedWhere = `${where}.examWindows[${index}]`;
+    if (!isRecord(seed)) throw new Error(`${seedWhere} must be an object`);
+    if (typeof seed.year !== "number" || !Number.isInteger(seed.year)) {
+      throw new Error(`${seedWhere}.year must be an integer`);
+    }
+    if (seed.month !== 7 && seed.month !== 12) {
+      throw new Error(`${seedWhere}.month must be 7 or 12`);
+    }
+    if (
+      typeof seed.day !== "number" ||
+      !Number.isInteger(seed.day) ||
+      seed.day < 1 ||
+      seed.day > 31
+    ) {
+      throw new Error(`${seedWhere}.day must be a day of the month`);
+    }
+    if (typeof seed.official !== "boolean") {
+      throw new Error(`${seedWhere}.official must be a boolean`);
+    }
+  });
+}
+
+function assertReferenceDataset(
+  value: unknown,
+  where: string,
+): asserts value is ReferenceDataset {
+  if (!isRecord(value)) throw new Error(`${where} must contain an object`);
+  if (value.kind === "topic") {
+    assertTopicReferenceDataset(value, where);
+    return;
+  }
+  if (value.kind === "jlpt-overview") {
+    assertJlptOverviewDataset(value, where);
+    return;
+  }
+  throw new Error(`${where}.kind must be "topic" or "jlpt-overview"`);
+}
+
 let kanjiTotal = 0;
 let vocabTotal = 0;
 
@@ -381,4 +616,31 @@ for (const file of examFiles) {
 
 console.log(
   `Verified ${exams.length} exam papers and ${examQuestionTotal} questions.`,
+);
+
+const referenceDir = path.join(ROOT, "data", "reference");
+const referenceFiles = readdirSync(referenceDir)
+  .filter((file) => file.endsWith(".json"))
+  .sort();
+
+if (referenceFiles.length < 9) {
+  throw new Error("data/reference must contain all nine reference datasets");
+}
+
+let referenceItemTotal = 0;
+
+for (const file of referenceFiles) {
+  const rawReference = readJson(`data/reference/${file}`);
+  assertReferenceDataset(rawReference, `data/reference/${file}`);
+
+  // Compile-time proof that the verified values satisfy the shared interfaces.
+  const dataset: ReferenceDataset = rawReference;
+  const count =
+    dataset.kind === "topic" ? dataset.items.length : dataset.levelsData.length;
+  referenceItemTotal += count;
+  console.log(`${file}: ${count} entries — schema OK`);
+}
+
+console.log(
+  `Verified ${referenceFiles.length} reference datasets and ${referenceItemTotal} entries.`,
 );

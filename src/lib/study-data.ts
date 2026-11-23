@@ -14,6 +14,13 @@ export async function loadAllKanji(): Promise<Record<JlptLevel, Set<string>>> {
   ) as Record<JlptLevel, Set<string>>;
 }
 
+/** Load full kanji entries from every level for search/highlight tools. */
+export async function loadAllKanjiEntries(): Promise<KanjiEntry[]> {
+  const levels: JlptLevel[] = ["N5", "N4", "N3", "N2", "N1"];
+  const groups = await Promise.all(levels.map((level) => loadKanji(level)));
+  return groups.flat();
+}
+
 export interface FlashcardExample {
   word: string;
   reading: string;
