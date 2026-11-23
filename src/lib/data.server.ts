@@ -66,3 +66,19 @@ export function levelCounts(level: JlptLevel): { kanji: number; vocab: number } 
 
 /** Small, representative set used by the home-page daily spotlight. */
 export const spotlightKanji: KanjiEntry[] = kanjiByLevel.N5.slice(0, 24);
+
+/**
+ * Curated first impressions for the hero quick drill, followed by the wider
+ * N5 spotlight pool so "Next kanji" always has fresh items to cycle through.
+ */
+const FEATURED_CHARACTERS = ["学", "語", "日", "人", "本", "時"];
+const featuredKanji = FEATURED_CHARACTERS.map((character) =>
+  kanjiLookup.get(character),
+).filter((entry): entry is KanjiEntry => Boolean(entry));
+
+export const previewKanji: KanjiEntry[] = [
+  ...featuredKanji,
+  ...spotlightKanji.filter(
+    (kanji) => !FEATURED_CHARACTERS.includes(kanji.character),
+  ),
+];
