@@ -18,8 +18,39 @@ import {
 
 export const dynamicParams = false;
 
+/** Percent escapes can use either hex case depending on the HTTP client. */
+function percentEncodingCaseVariants(value: string): string[] {
+  let variants = [""];
+  for (const char of encodeURIComponent(value)) {
+    const forms = /[a-f]/i.test(char)
+      ? [char.toLowerCase(), char.toUpperCase()]
+      : [char];
+    variants = variants.flatMap((variant) =>
+      forms.map((form) => `${variant}${form}`),
+    );
+  }
+  return variants;
+}
+
 export function generateStaticParams() {
-  return allKanji.map((kanji) => ({ character: kanji.character }));
+  // Next 16 dev has two different checks for non-ASCII slugs with static
+  // export: it compares the raw percent-encoded URL against this list, but it
+  // matches routes after decoding the URL. Include the possible encodings in
+  // dev only; production keeps the decoded slugs used by the static export and
+  // sitemap. See https://github.com/vercel/next.js/issues/92192.
+  return allKanji.flatMap((kanji) => {
+    const params: Array<{ character: string }> = [
+      { character: kanji.character },
+    ];
+    if (process.env.NODE_ENV === "development") {
+      params.push(
+        ...percentEncodingCaseVariants(kanji.character).map((character) => ({
+          character,
+        })),
+      );
+    }
+    return params;
+  });
 }
 
 function pageUrl(character: string): string {
