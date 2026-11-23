@@ -1,0 +1,256 @@
+{
+  "id": "n1-sample-01",
+  "level": "N1",
+  "session": "Sample 01",
+  "title": {
+    "ja": "JLPT N1 過去問題風サンプル 01",
+    "en": "JLPT N1 Past-Paper Style Sample 01"
+  },
+  "description": {
+    "ja": "高度な語彙、論理的な接続、抽象的な読解を練習します。",
+    "en": "Practice advanced vocabulary, logical connectors, and abstract reading."
+  },
+  "passages": [
+    {
+      "id": "n1-s01-passage-01",
+      "title": {
+        "ja": "都市の景観と記憶",
+        "en": "Cityscape and memory"
+      },
+      "text": {
+        "ja": "都市の景観は、そこに住む人々の記憶と深く結びついている。古い建物が取り壊されるとき、単に古さが原因で失われるのではなく、その場所に積み重ねられた時間までもが消えるように感じられることがある。一方で、保存だけを優先すれば、都市は変化する機会を失う。近年は、古い要素を残しながら新しい用途を与える取り組みが、各地で模索されている。",
+        "en": "A city's landscape is deeply tied to the memories of the people who live there. When an old building is demolished, people may feel that not just an aged structure is lost, but also the time accumulated in that place. On the other hand, prioritising preservation alone deprives a city of opportunities to change. In recent years, communities have been exploring ways to keep old elements while giving them new uses."
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "n1-s01-q01",
+      "section": "vocab",
+      "type": "kanji-reading",
+      "prompt": {
+        "ja": "「斡旋」の読み方として正しいものはどれですか。",
+        "en": "Which is the correct reading of 斡旋?"
+      },
+      "choices": [
+        { "label": "1", "text": "あっせん", "translation": "mediation" },
+        { "label": "2", "text": "あつせん", "translation": "—" },
+        { "label": "3", "text": "かんせん", "translation": "infection / line" },
+        { "label": "4", "text": "おうせん", "translation": "—" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「斡旋」は「あっせん」と読み、間に立って物事をまとめることを意味します。",
+        "en": "斡旋 is read あっせん and means to mediate or broker an arrangement."
+      }
+    },
+    {
+      "id": "n1-s01-q02",
+      "section": "vocab",
+      "type": "orthography",
+      "prompt": {
+        "ja": "「きょうぎ」を漢字で書くと、どれですか。",
+        "en": "Which kanji represents きょうぎ (consultation / agreement)?"
+      },
+      "choices": [
+        { "label": "1", "text": "協議", "translation": "consultation" },
+        { "label": "2", "text": "協儀", "translation": "—" },
+        { "label": "3", "text": "鏡議", "translation": "—" },
+        { "label": "4", "text": "強義", "translation": "—" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「協議」が正しい表記です。「今後の対応を協議する」のように使います。",
+        "en": "協議 is correct, as in 今後の対応を協議する (to discuss future measures)."
+      }
+    },
+    {
+      "id": "n1-s01-q03",
+      "section": "vocab",
+      "type": "contextual-expression",
+      "prompt": {
+        "ja": "新制度の運用をめぐり、現場からは懸念の声が＿。",
+        "en": "Concerns ＿ from the workplace regarding the new system."
+      },
+      "choices": [
+        { "label": "1", "text": "上がっている", "translation": "have been raised" },
+        { "label": "2", "text": "挙げている", "translation": "are raising" },
+        { "label": "3", "text": "登っている", "translation": "are climbing" },
+        { "label": "4", "text": "出かけている", "translation": "have gone out" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「声が上がる」は、意見や懸念が表明されるという意味の慣用表現です。",
+        "en": "声が上がる is an idiom meaning that opinions or concerns are being voiced."
+      }
+    },
+    {
+      "id": "n1-s01-q04",
+      "section": "vocab",
+      "type": "paraphrase",
+      "prompt": {
+        "ja": "「彼の発言は極めて示唆的だった」の意味に最も近いものはどれですか。",
+        "en": "Which is closest in meaning to 彼の発言は極めて示唆的だった?"
+      },
+      "choices": [
+        { "label": "1", "text": "彼の発言は、多くのことを考えさせる内容だった", "translation": "his remark made people think about many things" },
+        { "label": "2", "text": "彼の発言は、非常に分かりやすい内容だった", "translation": "his remark was very easy to understand" },
+        { "label": "3", "text": "彼の発言は、根拠のない噂だった", "translation": "his remark was an unfounded rumour" },
+        { "label": "4", "text": "彼の発言は、短くて簡潔だった", "translation": "his remark was short and concise" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「示唆的」は、直接は言わないが多くのことを考えさせるという意味です。",
+        "en": "示唆的 means suggestive: it implies a great deal without stating it directly."
+      }
+    },
+    {
+      "id": "n1-s01-q05",
+      "section": "vocab",
+      "type": "usage",
+      "prompt": {
+        "ja": "「〜だに」を使った文として自然なものはどれですか。",
+        "en": "Which sentence uses 〜だに naturally?"
+      },
+      "choices": [
+        { "label": "1", "text": "地震のことを考えるだに、身の毛がよだつ。", "translation": "Just thinking of an earthquake makes my hair stand on end." },
+        { "label": "2", "text": "地震のことを考えるだに、安心した。", "translation": "—" },
+        { "label": "3", "text": "地震のことを考えただに、身の毛がよだつ。", "translation": "—" },
+        { "label": "4", "text": "地震のことを考えるだにして、安心した。", "translation": "—" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「〜だに」は「〜するだけで」という意味で、後ろに強い感情が続きます。",
+        "en": "〜だに means merely doing something, and is followed by a strong emotional response."
+      }
+    },
+    {
+      "id": "n1-s01-q06",
+      "section": "grammar",
+      "type": "sentence-grammar",
+      "prompt": {
+        "ja": "この問題を語る＿、彼をおいて適任者はいない。",
+        "en": "When it comes to this issue, no one is more suitable ＿ him."
+      },
+      "choices": [
+        { "label": "1", "text": "をおいて", "translation": "other than" },
+        { "label": "2", "text": "に際して", "translation": "on the occasion of" },
+        { "label": "3", "text": "に伴って", "translation": "along with" },
+        { "label": "4", "text": "をこめて", "translation": "with" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「〜をおいて」は「それ以外に」という意味で、後に否定が続くのが特徴です。",
+        "en": "〜をおいて means other than and is typically followed by a negative statement."
+      }
+    },
+    {
+      "id": "n1-s01-q07",
+      "section": "grammar",
+      "type": "scrambled-sentence",
+      "prompt": {
+        "ja": "その映画は、見る者を ＿ ＿ ★ ＿ 。",
+        "en": "That film moves everyone who sees it ＿ ＿ ★ ＿ . Put the four options in order; the ★ slot is the answer."
+      },
+      "choices": [
+        { "label": "1", "text": "感動させ", "translation": "moves" },
+        { "label": "2", "text": "ずには", "translation": "without" },
+        { "label": "3", "text": "おかない", "translation": "leave undone" },
+        { "label": "4", "text": "静かに", "translation": "quietly / deeply" }
+      ],
+      "correctIndex": 1,
+      "explanation": {
+        "ja": "正しい順序は 4→1→2→3 で、「その映画は、見る者を静かに感動させずにはおかない。」になります。★ には 2「ずには」が入ります。",
+        "en": "The correct order is 4→1→2→3: その映画は、見る者を静かに感動させずにはおかない。The ★ slot takes option 2, ずには."
+      },
+      "scrambled": {
+        "correctOrder": [3, 0, 1, 2],
+        "starSlotIndex": 2,
+        "completedSentence": "その映画は、見る者を静かに感動させずにはおかない。"
+      }
+    },
+    {
+      "id": "n1-s01-q08",
+      "section": "grammar",
+      "type": "text-grammar",
+      "prompt": {
+        "ja": "従来の方法では限界がある。＿、新たな視点が必要とされている。",
+        "en": "The conventional method has limits. ＿, a new perspective is needed."
+      },
+      "choices": [
+        { "label": "1", "text": "ゆえに", "translation": "therefore" },
+        { "label": "2", "text": "それとも", "translation": "or" },
+        { "label": "3", "text": "とはいえ", "translation": "even so" },
+        { "label": "4", "text": "なおさら", "translation": "all the more" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "前の文が後の結論の理由になっているので、「ゆえに」が合います。",
+        "en": "The first clause gives the reason for the second, so ゆえに (therefore) fits."
+      }
+    },
+    {
+      "id": "n1-s01-q09",
+      "section": "reading",
+      "type": "mid-length-reading",
+      "prompt": {
+        "ja": "都市の景観は、何と深く結びついていると述べられていますか。",
+        "en": "What is a city's landscape said to be deeply connected with?"
+      },
+      "choices": [
+        { "label": "1", "text": "住む人々の記憶", "translation": "residents' memories" },
+        { "label": "2", "text": "最新の建築技術", "translation": "the latest building technology" },
+        { "label": "3", "text": "観光客の評価", "translation": "tourists' reviews" },
+        { "label": "4", "text": "気象の変化", "translation": "changes in weather" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "最初の文に「人々の記憶と深く結びついている」とあります。",
+        "en": "The opening sentence states that it is deeply tied to people's memories."
+      },
+      "passageId": "n1-s01-passage-01"
+    },
+    {
+      "id": "n1-s01-q10",
+      "section": "reading",
+      "type": "mid-length-reading",
+      "prompt": {
+        "ja": "古い建物が取り壊されるとき、どのような感覚が生じることがありますか。",
+        "en": "What feeling can arise when an old building is demolished?"
+      },
+      "choices": [
+        { "label": "1", "text": "その場所の時間まで消えるような感覚", "translation": "a sense that even the time in that place disappears" },
+        { "label": "2", "text": "新しい技術への期待だけ", "translation": "only excitement about new technology" },
+        { "label": "3", "text": "交通が便利になる喜び", "translation": "joy at improved transport" },
+        { "label": "4", "text": "保存の必要を否定する気持ち", "translation": "a feeling that preservation is unnecessary" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「積み重ねられた時間までもが消えるように感じられる」と述べられています。",
+        "en": "The passage says people may feel that even the accumulated time in that place disappears."
+      },
+      "passageId": "n1-s01-passage-01"
+    },
+    {
+      "id": "n1-s01-q11",
+      "section": "reading",
+      "type": "mid-length-reading",
+      "prompt": {
+        "ja": "近年、各地で模索されている取り組みは何ですか。",
+        "en": "What approach is being explored in various places recently?"
+      },
+      "choices": [
+        { "label": "1", "text": "古い要素を残しながら、新しい用途を与えること", "translation": "keeping old elements while giving them new uses" },
+        { "label": "2", "text": "すべての古い建物を取り壊すこと", "translation": "demolishing all old buildings" },
+        { "label": "3", "text": "都市の変化を完全に止めること", "translation": "stopping urban change completely" },
+        { "label": "4", "text": "記憶を記録しないこと", "translation": "not recording memories" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "最後の文に「古い要素を残しながら新しい用途を与える取り組み」とあります。",
+        "en": "The final sentence describes keeping old elements while giving them new uses."
+      },
+      "passageId": "n1-s01-passage-01"
+    }
+  ]
+}

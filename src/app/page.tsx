@@ -5,6 +5,12 @@ import { LEVELS, LEVEL_META, levelHref, practiceHref } from "@/lib/site";
 
 const tools = [
   {
+    title: "Past-paper practice",
+    description: "Original N5–N1 exam papers with bilingual answer explanations.",
+    href: "/exams/",
+    cta: "Browse exam bank",
+  },
+  {
     title: "Kanji & vocabulary grids",
     description: "Search, filter, and open any item from a level.",
     href: "/jlpt/n5#explorer",

@@ -1,0 +1,256 @@
+{
+  "id": "n2-sample-01",
+  "level": "N2",
+  "session": "Sample 01",
+  "title": {
+    "ja": "JLPT N2 過去問題風サンプル 01",
+    "en": "JLPT N2 Past-Paper Style Sample 01"
+  },
+  "description": {
+    "ja": "抽象的な語彙、逆接・根拠の文型、情報量の多い文章を練習します。",
+    "en": "Practice abstract vocabulary, contrast and evidence patterns, and information-dense passages."
+  },
+  "passages": [
+    {
+      "id": "n2-s01-passage-01",
+      "title": {
+        "ja": "地域図書館の再開",
+        "en": "The community library reopens"
+      },
+      "text": {
+        "ja": "閉鎖されていた地域図書館が、来月再開することになりました。改装中だった建物には、新しい机とパソコンが置かれ、閲覧室も広くなりました。館長によると、開館初日には地元の作家を招いて読み聞かせを行う予定です。利用者からは、静かに勉強できる場所が増えることを歓迎する声が上がっています。一方で、駐車場が少ないことを心配する人もいます。",
+        "en": "The community library, which had been closed, is set to reopen next month. During the renovation, new desks and computers were installed and the reading room was enlarged. According to the director, a local author will be invited to give a reading on the first day. Users have welcomed the extra quiet study space, although some are concerned that there is not enough parking."
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "n2-s01-q01",
+      "section": "vocab",
+      "type": "kanji-reading",
+      "prompt": {
+        "ja": "「傾向」の読み方として正しいものはどれですか。",
+        "en": "Which is the correct reading of 傾向?"
+      },
+      "choices": [
+        { "label": "1", "text": "けいこう", "translation": "tendency" },
+        { "label": "2", "text": "けいこうせい", "translation": "—" },
+        { "label": "3", "text": "ぎょうこう", "translation": "—" },
+        { "label": "4", "text": "けんこう", "translation": "health" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「傾向」は「けいこう」と読み、ある方向へ向かう性質を表します。",
+        "en": "傾向 is read けいこう and means a tendency or trend."
+      }
+    },
+    {
+      "id": "n2-s01-q02",
+      "section": "vocab",
+      "type": "orthography",
+      "prompt": {
+        "ja": "「かいぜん」を漢字で書くと、どれですか。",
+        "en": "Which kanji represents かいぜん (improvement)?"
+      },
+      "choices": [
+        { "label": "1", "text": "改善", "translation": "improvement" },
+        { "label": "2", "text": "改然", "translation": "—" },
+        { "label": "3", "text": "壊善", "translation": "—" },
+        { "label": "4", "text": "階前", "translation": "—" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「改善」が正しい表記です。「サービスを改善する」のように使います。",
+        "en": "改善 is correct, as in サービスを改善する (to improve service)."
+      }
+    },
+    {
+      "id": "n2-s01-q03",
+      "section": "vocab",
+      "type": "contextual-expression",
+      "prompt": {
+        "ja": "新しい制度が導入され、現場では混乱が＿。",
+        "en": "A new system was introduced, and confusion ＿ at the workplace."
+      },
+      "choices": [
+        { "label": "1", "text": "生じている", "translation": "has arisen" },
+        { "label": "2", "text": "生まれている", "translation": "is being born" },
+        { "label": "3", "text": "起こしている", "translation": "is causing" },
+        { "label": "4", "text": "現れている", "translation": "is appearing" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「混乱が生じる」は、問題や状態が発生するという意味の固定した言い方です。",
+        "en": "混乱が生じる is the natural collocation for confusion arising."
+      }
+    },
+    {
+      "id": "n2-s01-q04",
+      "section": "vocab",
+      "type": "paraphrase",
+      "prompt": {
+        "ja": "「この提案は実現可能性が高い」の意味に最も近いものはどれですか。",
+        "en": "Which is closest in meaning to この提案は実現可能性が高い?"
+      },
+      "choices": [
+        { "label": "1", "text": "この提案は実行に移せる可能性が高い", "translation": "the proposal is likely to be put into practice" },
+        { "label": "2", "text": "この提案はまだ検討されていない", "translation": "the proposal has not been considered yet" },
+        { "label": "3", "text": "この提案は失敗する可能性が高い", "translation": "the proposal is likely to fail" },
+        { "label": "4", "text": "この提案は非常に複雑だ", "translation": "the proposal is very complex" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「実現可能性が高い」とは、実際に実現する見込みが大きいという意味です。",
+        "en": "実現可能性が高い means there is a strong chance it can actually be realised."
+      }
+    },
+    {
+      "id": "n2-s01-q05",
+      "section": "vocab",
+      "type": "usage",
+      "prompt": {
+        "ja": "「〜ものの」を使った文として自然なものはどれですか。",
+        "en": "Which sentence uses 〜ものの naturally?"
+      },
+      "choices": [
+        { "label": "1", "text": "値段は高いものの、品質はとても良い。", "translation": "The price is high, but the quality is very good." },
+        { "label": "2", "text": "値段は高いものの、品質も悪い。", "translation": "—" },
+        { "label": "3", "text": "値段は高いもので、品質は良い。", "translation": "—" },
+        { "label": "4", "text": "値段が高いものの、買いませんでした。", "translation": "—" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「〜ものの」は、前の内容を認めながら、後に反対の評価を続ける文型です。",
+        "en": "〜ものの acknowledges the first point and then adds a contrasting evaluation."
+      }
+    },
+    {
+      "id": "n2-s01-q06",
+      "section": "grammar",
+      "type": "sentence-grammar",
+      "prompt": {
+        "ja": "彼は経験が少ない＿、判断力が優れている。",
+        "en": "He has little experience, ＿ he has excellent judgement."
+      },
+      "choices": [
+        { "label": "1", "text": "にもかかわらず", "translation": "despite" },
+        { "label": "2", "text": "にしたがって", "translation": "according to" },
+        { "label": "3", "text": "に加えて", "translation": "in addition" },
+        { "label": "4", "text": "に先行して", "translation": "ahead of" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "前の事実と反対の結果が続くので、「〜にもかかわらず」が合います。",
+        "en": "The second clause contrasts with the first, so にもかかわらず is correct."
+      }
+    },
+    {
+      "id": "n2-s01-q07",
+      "section": "grammar",
+      "type": "scrambled-sentence",
+      "prompt": {
+        "ja": "説明を聞いた ＿ ＿ ★ ＿ 。",
+        "en": "Although I heard the explanation, ＿ ＿ ★ ＿ . Put the four options in order; the ★ slot is the answer."
+      },
+      "choices": [
+        { "label": "1", "text": "ものの", "translation": "although" },
+        { "label": "2", "text": "意味が", "translation": "the meaning" },
+        { "label": "3", "text": "分かりませんでした", "translation": "I did not understand" },
+        { "label": "4", "text": "よく", "translation": "well" }
+      ],
+      "correctIndex": 1,
+      "explanation": {
+        "ja": "正しい順序は 1→4→2→3 で、「説明を聞いたものの、よく意味が分かりませんでした。」になります。★ には 2「意味が」が入ります。",
+        "en": "The correct order is 1→4→2→3: 説明を聞いたものの、よく意味が分かりませんでした。The ★ slot takes option 2, 意味が."
+      },
+      "scrambled": {
+        "correctOrder": [0, 3, 1, 2],
+        "starSlotIndex": 2,
+        "completedSentence": "説明を聞いたものの、よく意味が分かりませんでした。"
+      }
+    },
+    {
+      "id": "n2-s01-q08",
+      "section": "grammar",
+      "type": "text-grammar",
+      "prompt": {
+        "ja": "この地域では雨が少ない。＿、農業は水源に大きく依存している。",
+        "en": "This region gets little rain. ＿, agriculture depends heavily on water sources."
+      },
+      "choices": [
+        { "label": "1", "text": "そのため", "translation": "therefore" },
+        { "label": "2", "text": "それでも", "translation": "even so" },
+        { "label": "3", "text": "一方で", "translation": "on the other hand" },
+        { "label": "4", "text": "たえず", "translation": "constantly" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "前の事実が後の結果の理由になっているので、「そのため」が合います。",
+        "en": "The first fact explains the second, so そのため (therefore) fits."
+      }
+    },
+    {
+      "id": "n2-s01-q09",
+      "section": "reading",
+      "type": "mid-length-reading",
+      "prompt": {
+        "ja": "図書館はいつ再開しますか。",
+        "en": "When will the library reopen?"
+      },
+      "choices": [
+        { "label": "1", "text": "来月", "translation": "next month" },
+        { "label": "2", "text": "来週", "translation": "next week" },
+        { "label": "3", "text": "今日", "translation": "today" },
+        { "label": "4", "text": "来年", "translation": "next year" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "最初の文に「来月再開することになりました」とあります。",
+        "en": "The first sentence says it will reopen 来月."
+      },
+      "passageId": "n2-s01-passage-01"
+    },
+    {
+      "id": "n2-s01-q10",
+      "section": "reading",
+      "type": "mid-length-reading",
+      "prompt": {
+        "ja": "開館初日には、何が行われますか。",
+        "en": "What will happen on the opening day?"
+      },
+      "choices": [
+        { "label": "1", "text": "地元の作家による読み聞かせ", "translation": "a reading by a local author" },
+        { "label": "2", "text": "パソコンの説明会", "translation": "a computer workshop" },
+        { "label": "3", "text": "古い本の販売", "translation": "a used-book sale" },
+        { "label": "4", "text": "駐車場の工事", "translation": "parking-lot construction" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「地元の作家を招いて読み聞かせを行う予定です」とあります。",
+        "en": "The director says they plan to invite a local author for a reading."
+      },
+      "passageId": "n2-s01-passage-01"
+    },
+    {
+      "id": "n2-s01-q11",
+      "section": "reading",
+      "type": "mid-length-reading",
+      "prompt": {
+        "ja": "利用者が心配していることは何ですか。",
+        "en": "What are some users worried about?"
+      },
+      "choices": [
+        { "label": "1", "text": "駐車場が少ないこと", "translation": "there is not enough parking" },
+        { "label": "2", "text": "閲覧室が狭いこと", "translation": "the reading room is small" },
+        { "label": "3", "text": "パソコンが古いこと", "translation": "the computers are old" },
+        { "label": "4", "text": "作家が来ないこと", "translation": "the author will not come" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "最後に「駐車場が少ないことを心配する人もいます」とあります。",
+        "en": "The final sentence mentions concern about limited parking."
+      },
+      "passageId": "n2-s01-passage-01"
+    }
+  ]
+}

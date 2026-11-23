@@ -1,6 +1,13 @@
 import type { MetadataRoute } from "next";
 import { allKanji } from "@/lib/data.server";
-import { LEVELS, absoluteUrl, kanjiUrlPath, levelHref } from "@/lib/site";
+import { allExamPapers } from "@/lib/exams.server";
+import {
+  LEVELS,
+  absoluteUrl,
+  examUrlPath,
+  kanjiUrlPath,
+  levelHref,
+} from "@/lib/site";
 
 export const dynamic = "force-static";
 
@@ -51,6 +58,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      url: absoluteUrl("/exams/"),
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    ...allExamPapers.map((paper) => ({
+      url: absoluteUrl(examUrlPath(paper.id)),
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
     ...allKanji.map((kanji) => ({
       url: absoluteUrl(kanjiUrlPath(kanji.character)),
       lastModified,

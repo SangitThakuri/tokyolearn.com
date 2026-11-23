@@ -1,0 +1,256 @@
+{
+  "id": "n3-sample-01",
+  "level": "N3",
+  "session": "Sample 01",
+  "title": {
+    "ja": "JLPT N3 過去問題風サンプル 01",
+    "en": "JLPT N3 Past-Paper Style Sample 01"
+  },
+  "description": {
+    "ja": "文脈による語彙の使い分け、複合文型、中文の読解を練習します。",
+    "en": "Practice context-based vocabulary, combined grammar patterns, and mid-length reading."
+  },
+  "passages": [
+    {
+      "id": "n3-s01-passage-01",
+      "title": {
+        "ja": "駅の掲示板",
+        "en": "The station noticeboard"
+      },
+      "text": {
+        "ja": "先週、駅の掲示板に、イベントの案内が貼ってありました。そのイベントは、土曜日に駅前の広場で開かれる予定でした。私は友人と行こうと思いましたが、当日は雨が降っていました。それでも、多くの人が集まっていて、子どもたちが歌を歌っていました。私は写真を何枚も撮りました。雨の日でしたが、楽しい午後になりました。",
+        "en": "Last week, a notice about an event was posted on the station noticeboard. The event was planned for Saturday in the plaza in front of the station. I thought about going with a friend, but it rained that day. Even so, many people had gathered and children were singing songs. I took many photos. It was a rainy day, but it turned into an enjoyable afternoon."
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "n3-s01-q01",
+      "section": "vocab",
+      "type": "kanji-reading",
+      "prompt": {
+        "ja": "「環境」の読み方として正しいものはどれですか。",
+        "en": "Which is the correct reading of 環境?"
+      },
+      "choices": [
+        { "label": "1", "text": "かんきょう", "translation": "environment" },
+        { "label": "2", "text": "かんけい", "translation": "relation" },
+        { "label": "3", "text": "かんきょうき", "translation": "—" },
+        { "label": "4", "text": "がんきょう", "translation": "—" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「環境」は「かんきょう」と読み、environment を意味します。",
+        "en": "環境 is read かんきょう and means environment."
+      }
+    },
+    {
+      "id": "n3-s01-q02",
+      "section": "vocab",
+      "type": "orthography",
+      "prompt": {
+        "ja": "「たいおう」を漢字で書くと、どれですか。",
+        "en": "Which kanji represents たいおう (to respond / handle)?"
+      },
+      "choices": [
+        { "label": "1", "text": "対応", "translation": "response" },
+        { "label": "2", "text": "対忘", "translation": "—" },
+        { "label": "3", "text": "台応", "translation": "—" },
+        { "label": "4", "text": "対央", "translation": "—" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「対応」が正しい表記です。「問題に対応する」のように使います。",
+        "en": "対応 is correct, as in 問題に対応する (to handle a problem)."
+      }
+    },
+    {
+      "id": "n3-s01-q03",
+      "section": "vocab",
+      "type": "contextual-expression",
+      "prompt": {
+        "ja": "会議の時間を変更したので、全員に＿。",
+        "en": "The meeting time changed, so we ＿ everyone."
+      },
+      "choices": [
+        { "label": "1", "text": "連絡しました", "translation": "contacted / notified" },
+        { "label": "2", "text": "連続しました", "translation": "continued" },
+        { "label": "3", "text": "接続しました", "translation": "connected" },
+        { "label": "4", "text": "対応しました", "translation": "responded" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "変更を人に知らせる意味では「連絡しました」が自然です。",
+        "en": "To inform people of a change, 連絡しました is the natural choice."
+      }
+    },
+    {
+      "id": "n3-s01-q04",
+      "section": "vocab",
+      "type": "paraphrase",
+      "prompt": {
+        "ja": "「この説明は簡潔だ」の「簡潔」と意味が近いものはどれですか。",
+        "en": "Which phrase is closest in meaning to 簡潔 in この説明は簡潔だ?"
+      },
+      "choices": [
+        { "label": "1", "text": "短くて分かりやすい", "translation": "short and clear" },
+        { "label": "2", "text": "長くて詳しい", "translation": "long and detailed" },
+        { "label": "3", "text": "難しくて曖昧", "translation": "difficult and vague" },
+        { "label": "4", "text": "静かで落ち着いている", "translation": "quiet and calm" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「簡潔」は、必要なことが短く整理されているという意味です。",
+        "en": "簡潔 means concise: short, clear, and well organised."
+      }
+    },
+    {
+      "id": "n3-s01-q05",
+      "section": "vocab",
+      "type": "usage",
+      "prompt": {
+        "ja": "「〜おかげで」を使った文として自然なものはどれですか。",
+        "en": "Which sentence uses 〜おかげで naturally?"
+      },
+      "choices": [
+        { "label": "1", "text": "先生が教えてくれたおかげで、試験に合格しました。", "translation": "Thanks to my teacher, I passed the exam." },
+        { "label": "2", "text": "先生が教えてくれたおかげで、試験に落ちました。", "translation": "—" },
+        { "label": "3", "text": "先生が教えてくれたおかげでに、合格しました。", "translation": "—" },
+        { "label": "4", "text": "先生が教えてくれるおかげでは、合格します。", "translation": "—" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「〜おかげで」は良い結果の理由を表し、後ろに良い結果が続きます。",
+        "en": "〜おかげで gives the reason for a positive result, so option 1 is natural."
+      }
+    },
+    {
+      "id": "n3-s01-q06",
+      "section": "grammar",
+      "type": "sentence-grammar",
+      "prompt": {
+        "ja": "彼は日本語が上手な＿、英語も話せます。",
+        "en": "He is good at Japanese and ＿ can speak English."
+      },
+      "choices": [
+        { "label": "1", "text": "うえに", "translation": "in addition" },
+        { "label": "2", "text": "一方で", "translation": "on the other hand" },
+        { "label": "3", "text": "かわりに", "translation": "instead" },
+        { "label": "4", "text": "ばかりに", "translation": "just because" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "良い点を追加する意味では「〜うえに」を使います。",
+        "en": "〜うえに adds another positive point: he is good at Japanese and also speaks English."
+      }
+    },
+    {
+      "id": "n3-s01-q07",
+      "section": "grammar",
+      "type": "scrambled-sentence",
+      "prompt": {
+        "ja": "雨が降った ＿ ＿ ★ ＿ 。",
+        "en": "Because it rained, ＿ ＿ ★ ＿ . Put the four options in order; the ★ slot is the answer."
+      },
+      "choices": [
+        { "label": "1", "text": "花が", "translation": "flowers" },
+        { "label": "2", "text": "おかげで", "translation": "thanks to" },
+        { "label": "3", "text": "元気になりました", "translation": "became lively" },
+        { "label": "4", "text": "庭の", "translation": "garden" }
+      ],
+      "correctIndex": 3,
+      "explanation": {
+        "ja": "正しい順序は 2→4→1→3 で、「雨が降ったおかげで、庭の花が元気になりました。」になります。★ には 4「庭の」が入ります。",
+        "en": "The correct order is 2→4→1→3: 雨が降ったおかげで、庭の花が元気になりました。The ★ slot takes option 4, 庭の."
+      },
+      "scrambled": {
+        "correctOrder": [1, 3, 0, 2],
+        "starSlotIndex": 1,
+        "completedSentence": "雨が降ったおかげで、庭の花が元気になりました。"
+      }
+    },
+    {
+      "id": "n3-s01-q08",
+      "section": "grammar",
+      "type": "text-grammar",
+      "prompt": {
+        "ja": "この店は安いです。＿、味もいいです。",
+        "en": "This restaurant is cheap. ＿, the food is good too."
+      },
+      "choices": [
+        { "label": "1", "text": "それに", "translation": "besides" },
+        { "label": "2", "text": "それで", "translation": "so" },
+        { "label": "3", "text": "だから", "translation": "therefore" },
+        { "label": "4", "text": "しかし", "translation": "however" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "同じ方向の情報を追加するので、「それに」が合います。",
+        "en": "It adds another matching point, so それに (besides) is correct."
+      }
+    },
+    {
+      "id": "n3-s01-q09",
+      "section": "reading",
+      "type": "mid-length-reading",
+      "prompt": {
+        "ja": "掲示板には何が貼ってありましたか。",
+        "en": "What was posted on the noticeboard?"
+      },
+      "choices": [
+        { "label": "1", "text": "イベントの案内", "translation": "an event announcement" },
+        { "label": "2", "text": "雨の知らせ", "translation": "a rain notice" },
+        { "label": "3", "text": "写真展のポスター", "translation": "a photo exhibition poster" },
+        { "label": "4", "text": "時間割", "translation": "a timetable" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「イベントの案内が貼ってありました」とあります。",
+        "en": "The passage says イベントの案内が貼ってありました."
+      },
+      "passageId": "n3-s01-passage-01"
+    },
+    {
+      "id": "n3-s01-q10",
+      "section": "reading",
+      "type": "mid-length-reading",
+      "prompt": {
+        "ja": "イベントはどこで開かれる予定でしたか。",
+        "en": "Where was the event planned to be held?"
+      },
+      "choices": [
+        { "label": "1", "text": "駅前の広場", "translation": "the plaza in front of the station" },
+        { "label": "2", "text": "学校の体育館", "translation": "the school gym" },
+        { "label": "3", "text": "駅の中", "translation": "inside the station" },
+        { "label": "4", "text": "友人のお宅", "translation": "a friend's home" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「土曜日に駅前の広場で開かれる予定でした」とあります。",
+        "en": "The text says it was planned for 駅前の広場."
+      },
+      "passageId": "n3-s01-passage-01"
+    },
+    {
+      "id": "n3-s01-q11",
+      "section": "reading",
+      "type": "mid-length-reading",
+      "prompt": {
+        "ja": "筆者は、その日何をしましたか。",
+        "en": "What did the writer do that day?"
+      },
+      "choices": [
+        { "label": "1", "text": "写真をたくさん撮りました", "translation": "took many photos" },
+        { "label": "2", "text": "歌を歌いました", "translation": "sang songs" },
+        { "label": "3", "text": "掲示板を書きました", "translation": "wrote the noticeboard" },
+        { "label": "4", "text": "雨の中を走りました", "translation": "ran in the rain" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "子どもたちが歌を歌っていましたが、筆者は「写真を何枚も撮りました」と述べています。",
+        "en": "The children sang, but the writer says 写真を何枚も撮りました."
+      },
+      "passageId": "n3-s01-passage-01"
+    }
+  ]
+}

@@ -70,6 +70,16 @@ export function kanjiHref(character: string): string {
   return `/kanji/${character}`;
 }
 
+/** Static exam paper route generated from /data/exams. */
+export function examHref(paperId: string): string {
+  return `/exams/${paperId}`;
+}
+
+/** Trailing-slash URL used in canonical tags and the sitemap. */
+export function examUrlPath(paperId: string): string {
+  return `${examHref(paperId)}/`;
+}
+
 /** URL-encoded, trailing-slash path used in canonical tags and the sitemap. */
 export function kanjiUrlPath(character: string): string {
   return `/kanji/${encodeURIComponent(character)}/`;

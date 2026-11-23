@@ -4,11 +4,15 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "generate:exams": "node scripts/generate-exam-manifest.mjs",
+    "predev": "npm run generate:exams",
     "dev": "next dev",
+    "prebuild": "npm run generate:exams",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
     "fetch:data": "node scripts/fetch-jlpt-data.mjs",
+    "preverify:data": "npm run generate:exams",
     "verify:data": "tsc --noEmit && node --experimental-strip-types scripts/verify-data.ts"
   },
   "dependencies": {

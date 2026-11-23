@@ -38,6 +38,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 .
 ├── data/                 # GitHub-hosted JSON datasets, versioned with this repo
 │   ├── absolute-beginner/
+│   ├── exams/            # past-paper-style exam JSON files (one paper per file)
 │   ├── n5/
 │   ├── n4/
 │   ├── n3/
@@ -58,6 +59,24 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
   GitHub URL. There is no runtime database and no server fetch layer.
 - Keep `data/` filenames predictable (`kanji.json`, `vocab.json`,
   `grammar.json`, `kana.json`) per level.
+- Exam papers live in `data/exams/<level>-<slug>.json` (for example
+  `n5-sample-01.json`). The paper's `id` must match the filename without
+  `.json`; its schema is defined in `src/types/exam.ts`.
+
+### Adding an exam paper (automatic static pages)
+
+- To publish a new paper, add one valid JSON file to `data/exams/` and push.
+  No route code needs to change.
+- `npm run build` runs `prebuild` → `npm run generate:exams`, which scans
+  `data/exams/` and rewrites `src/generated/exam-manifest.ts`. Never hand-edit
+  that generated file.
+- `src/app/exams/[paperId]/page.tsx` calls `generateStaticParams()` from that
+  manifest, so every paper becomes a static `out/exams/<paperId>/index.html`
+  page and a sitemap entry at build time. Cloudflare Pages builds with
+  `npm run build` on every push, so a git push with a new exam JSON file
+  automatically generates and deploys its page.
+- `npm run dev` runs the same generator through `predev`; restart `next dev`
+  after adding a file so the new route is picked up locally.
 
 ## Aesthetic & UX
 

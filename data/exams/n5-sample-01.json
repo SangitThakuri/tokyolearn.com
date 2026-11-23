@@ -1,0 +1,264 @@
+{
+  "id": "n5-sample-01",
+  "level": "N5",
+  "session": "Sample 01",
+  "title": {
+    "ja": "JLPT N5 過去問題風サンプル 01",
+    "en": "JLPT N5 Past-Paper Style Sample 01"
+  },
+  "description": {
+    "ja": "文字・語彙、文法、読解の基礎を練習するオリジナル問題集です。",
+    "en": "An original practice set covering the basics of vocabulary, grammar, and reading."
+  },
+  "passages": [
+    {
+      "id": "n5-s01-passage-01",
+      "title": {
+        "ja": "学校の前の店",
+        "en": "The shop in front of the school"
+      },
+      "text": {
+        "ja": "私の学校は駅の近くにあります。毎朝、私は七時に家を出て、自転車で学校へ行きます。学校の前には小さな店があります。そこで牛乳とパンを買います。店の人はとても親切です。",
+        "en": "My school is near the station. Every morning I leave home at seven and ride a bicycle to school. In front of the school there is a small shop. I buy milk and bread there. The shopkeeper is very kind."
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "n5-s01-q01",
+      "section": "vocab",
+      "type": "kanji-reading",
+      "prompt": {
+        "ja": "「学生」の読み方として正しいものはどれですか。",
+        "en": "Which is the correct reading of 学生?"
+      },
+      "choices": [
+        { "label": "1", "text": "がくせい", "translation": "student" },
+        { "label": "2", "text": "がくしょう", "translation": "scholar" },
+        { "label": "3", "text": "がっせい", "translation": "—" },
+        { "label": "4", "text": "がくじ", "translation": "—" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「学生」は「がくせい」と読みます。「学」は「がく」、「生」は「せい」です。",
+        "en": "学生 is read がくせい. 学 is がく and 生 is せい."
+      }
+    },
+    {
+      "id": "n5-s01-q02",
+      "section": "vocab",
+      "type": "orthography",
+      "prompt": {
+        "ja": "「えき」を漢字で書くと、どれですか。",
+        "en": "Which kanji represents the word えき (station)?"
+      },
+      "choices": [
+        { "label": "1", "text": "駅", "translation": "station" },
+        { "label": "2", "text": "説", "translation": "explain" },
+        { "label": "3", "text": "験", "translation": "test" },
+        { "label": "4", "text": "掲", "translation": "post" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「駅」は「えき」と読み、station を意味します。ほかの漢字は「せつ」「けん」「けい」などと読みます。",
+        "en": "駅 is read えき and means station. The other kanji are read せつ, けん, and けい."
+      }
+    },
+    {
+      "id": "n5-s01-q03",
+      "section": "vocab",
+      "type": "contextual-expression",
+      "prompt": {
+        "ja": "毎朝、コーヒーを＿。",
+        "en": "Every morning I ＿ coffee."
+      },
+      "choices": [
+        { "label": "1", "text": "飲みます", "translation": "drink" },
+        { "label": "2", "text": "食べます", "translation": "eat" },
+        { "label": "3", "text": "歩きます", "translation": "walk" },
+        { "label": "4", "text": "見ます", "translation": "watch" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "飲み物であるコーヒーには「飲みます」を使います。",
+        "en": "Coffee is a drink, so 飲みます (drink) is the natural verb."
+      }
+    },
+    {
+      "id": "n5-s01-q04",
+      "section": "vocab",
+      "type": "paraphrase",
+      "prompt": {
+        "ja": "「祖母は元気です」の「元気」と意味が近い言葉はどれですか。",
+        "en": "Which word is closest in meaning to 元気 in 祖母は元気です?"
+      },
+      "choices": [
+        { "label": "1", "text": "健康", "translation": "health / healthy" },
+        { "label": "2", "text": "静か", "translation": "quiet" },
+        { "label": "3", "text": "不便", "translation": "inconvenient" },
+        { "label": "4", "text": "弱い", "translation": "weak" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「元気」は体調がよいという意味で、「健康」に近い言葉です。",
+        "en": "元気 means in good health or full of energy, so 健康 is the closest match."
+      }
+    },
+    {
+      "id": "n5-s01-q05",
+      "section": "vocab",
+      "type": "usage",
+      "prompt": {
+        "ja": "「まだ」の使い方として自然な文はどれですか。",
+        "en": "Which sentence uses まだ naturally?"
+      },
+      "choices": [
+        {
+          "label": "1",
+          "text": "昼なのに、まだ朝ご飯を食べていません。",
+          "translation": "It is noon, but I still have not eaten breakfast."
+        },
+        {
+          "label": "2",
+          "text": "昼なのに、もう朝ご飯を食べていません。",
+          "translation": "—"
+        },
+        { "label": "3", "text": "彼はまだ来た。", "translation": "—" },
+        { "label": "4", "text": "まだ、彼が来るでしょう。", "translation": "—" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「まだ」は、ある状態が続いていることを表します。choice 1 は「まだ〜ていません」の形で自然です。",
+        "en": "まだ describes a state that continues. Option 1 uses the natural pattern まだ〜ていません."
+      }
+    },
+    {
+      "id": "n5-s01-q06",
+      "section": "grammar",
+      "type": "sentence-grammar",
+      "prompt": {
+        "ja": "私は毎朝、コーヒー＿飲みます。",
+        "en": "I drink coffee every morning. Choose the correct particle."
+      },
+      "choices": [
+        { "label": "1", "text": "を", "translation": "direct object marker" },
+        { "label": "2", "text": "が", "translation": "subject marker" },
+        { "label": "3", "text": "に", "translation": "destination marker" },
+        { "label": "4", "text": "で", "translation": "location / means marker" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「飲みます」は他動詞なので、目的語の「コーヒー」には「を」を使います。",
+        "en": "飲みます is a transitive verb, so the object コーヒー takes the particle を."
+      }
+    },
+    {
+      "id": "n5-s01-q07",
+      "section": "grammar",
+      "type": "scrambled-sentence",
+      "prompt": {
+        "ja": "きのう、私は ＿ ＿ ★ ＿ 。",
+        "en": "Yesterday I ＿ ＿ ★ ＿ . Put the four options in the correct order; the ★ slot is the answer."
+      },
+      "choices": [
+        { "label": "1", "text": "本を", "translation": "a book" },
+        { "label": "2", "text": "読みました", "translation": "read" },
+        { "label": "3", "text": "図書館で", "translation": "at the library" },
+        { "label": "4", "text": "友達と", "translation": "with a friend" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "正しい順序は 3→4→1→2 で、「きのう、私は図書館で友達と本を読みました。」になります。★ には 1「本を」が入ります。",
+        "en": "The correct order is 3→4→1→2: きのう、私は図書館で友達と本を読みました。The ★ slot takes option 1, 本を."
+      },
+      "scrambled": {
+        "correctOrder": [2, 3, 0, 1],
+        "starSlotIndex": 2,
+        "completedSentence": "きのう、私は図書館で友達と本を読みました。"
+      }
+    },
+    {
+      "id": "n5-s01-q08",
+      "section": "grammar",
+      "type": "text-grammar",
+      "prompt": {
+        "ja": "これは私の犬です。名前はクロです。毎日、私と一緒に公園へ＿。",
+        "en": "This is my dog. Its name is Kuro. Every day it ＿ to the park with me."
+      },
+      "choices": [
+        { "label": "1", "text": "行きます", "translation": "goes" },
+        { "label": "2", "text": "行きません", "translation": "does not go" },
+        { "label": "3", "text": "行った", "translation": "went" },
+        { "label": "4", "text": "行かなかった", "translation": "did not go" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「毎日」という習慣を表す文なので、現在形の「行きます」が合います。",
+        "en": "毎日 describes a habit, so the present-tense 行きます fits."
+      }
+    },
+    {
+      "id": "n5-s01-q09",
+      "section": "reading",
+      "type": "short-reading",
+      "prompt": {
+        "ja": "学校はどこにありますか。",
+        "en": "Where is the school?"
+      },
+      "choices": [
+        { "label": "1", "text": "駅の近く", "translation": "near the station" },
+        { "label": "2", "text": "公園の近く", "translation": "near the park" },
+        { "label": "3", "text": "店の中", "translation": "inside the shop" },
+        { "label": "4", "text": "家の前", "translation": "in front of the house" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "本文の最初に「私の学校は駅の近くにあります」とあります。",
+        "en": "The first sentence says 私の学校は駅の近くにあります."
+      },
+      "passageId": "n5-s01-passage-01"
+    },
+    {
+      "id": "n5-s01-q10",
+      "section": "reading",
+      "type": "short-reading",
+      "prompt": {
+        "ja": "私は、どうやって学校へ行きますか。",
+        "en": "How does the writer go to school?"
+      },
+      "choices": [
+        { "label": "1", "text": "自転車で", "translation": "by bicycle" },
+        { "label": "2", "text": "電車で", "translation": "by train" },
+        { "label": "3", "text": "バスで", "translation": "by bus" },
+        { "label": "4", "text": "歩いて", "translation": "on foot" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「自転車で学校へ行きます」とあるので、答えは 1 です。",
+        "en": "The text says 自転車で学校へ行きます, so the answer is option 1."
+      },
+      "passageId": "n5-s01-passage-01"
+    },
+    {
+      "id": "n5-s01-q11",
+      "section": "reading",
+      "type": "short-reading",
+      "prompt": {
+        "ja": "店で何を買いますか。",
+        "en": "What does the writer buy at the shop?"
+      },
+      "choices": [
+        { "label": "1", "text": "牛乳とパン", "translation": "milk and bread" },
+        { "label": "2", "text": "コーヒーとパン", "translation": "coffee and bread" },
+        { "label": "3", "text": "牛乳と卵", "translation": "milk and eggs" },
+        { "label": "4", "text": "水とパン", "translation": "water and bread" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「そこで牛乳とパンを買います」の「そこ」は学校の前の店を指します。",
+        "en": "そこ refers to the shop in front of the school; the writer buys 牛乳とパン there."
+      },
+      "passageId": "n5-s01-passage-01"
+    }
+  ]
+}

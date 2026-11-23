@@ -60,6 +60,12 @@ export default function RootLayout({
                   className="hidden h-4 w-px bg-slate-300 sm:block dark:bg-slate-700"
                 />
                 <Link
+                  href="/exams/"
+                  className="hover:text-emerald-700 dark:hover:text-emerald-400"
+                >
+                  Exams
+                </Link>
+                <Link
                   href={practiceHref("flashcards", "N5")}
                   className="hover:text-emerald-700 dark:hover:text-emerald-400"
                 >

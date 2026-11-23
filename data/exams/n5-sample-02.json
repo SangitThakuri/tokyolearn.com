@@ -1,0 +1,284 @@
+{
+  "id": "n5-sample-02",
+  "level": "N5",
+  "session": "Sample 02",
+  "title": {
+    "ja": "JLPT N5 過去問題風サンプル 02",
+    "en": "JLPT N5 Past-Paper Style Sample 02"
+  },
+  "description": {
+    "ja": "第二回のサンプルです。Web Speech で再生できる聴解問題も含みます。",
+    "en": "A second practice set, including a listening item that can be played with Web Speech."
+  },
+  "passages": [
+    {
+      "id": "n5-s02-passage-01",
+      "title": {
+        "ja": "土曜日の公園",
+        "en": "The park on Saturday"
+      },
+      "text": {
+        "ja": "土曜日、家族と公園へ行きました。天気がよくて、子どもたちは芝生で遊びました。父は新聞を読み、母は写真を撮りました。私は友達とサッカーをしました。昼ご飯は、公園の近くの店でうどんを食べました。とても楽しかったです。",
+        "en": "On Saturday I went to the park with my family. The weather was good and the children played on the grass. My father read a newspaper and my mother took photos. I played soccer with a friend. For lunch we ate udon at a shop near the park. It was a lot of fun."
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "n5-s02-q01",
+      "section": "vocab",
+      "type": "kanji-reading",
+      "prompt": {
+        "ja": "「先生」の読み方として正しいものはどれですか。",
+        "en": "Which is the correct reading of 先生?"
+      },
+      "choices": [
+        { "label": "1", "text": "せんせい", "translation": "teacher" },
+        { "label": "2", "text": "せんせ", "translation": "—" },
+        { "label": "3", "text": "しんせい", "translation": "—" },
+        { "label": "4", "text": "せんしょう", "translation": "—" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「先生」は「せんせい」と読み、teacher を意味します。",
+        "en": "先生 is read せんせい and means teacher."
+      }
+    },
+    {
+      "id": "n5-s02-q02",
+      "section": "vocab",
+      "type": "orthography",
+      "prompt": {
+        "ja": "「みず」を漢字で書くと、どれですか。",
+        "en": "Which kanji represents the word みず (water)?"
+      },
+      "choices": [
+        { "label": "1", "text": "水", "translation": "water" },
+        { "label": "2", "text": "木", "translation": "tree" },
+        { "label": "3", "text": "本", "translation": "book" },
+        { "label": "4", "text": "犬", "translation": "dog" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「水」は「みず」と読みます。ほかは「き」「ほん」「いぬ」です。",
+        "en": "水 is read みず. The others are き, ほん, and いぬ."
+      }
+    },
+    {
+      "id": "n5-s02-q03",
+      "section": "vocab",
+      "type": "contextual-expression",
+      "prompt": {
+        "ja": "窓を＿ください。",
+        "en": "Please ＿ the window."
+      },
+      "choices": [
+        { "label": "1", "text": "開けて", "translation": "open" },
+        { "label": "2", "text": "開き", "translation": "—" },
+        { "label": "3", "text": "開ける", "translation": "—" },
+        { "label": "4", "text": "開けた", "translation": "—" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「〜てください」の前は動詞のて形です。「開ける」のて形は「開けて」です。",
+        "en": "The pattern 〜てください uses the te-form. The te-form of 開ける is 開けて."
+      }
+    },
+    {
+      "id": "n5-s02-q04",
+      "section": "vocab",
+      "type": "paraphrase",
+      "prompt": {
+        "ja": "「彼女は料理が上手です」の「上手」と意味が近い言葉はどれですか。",
+        "en": "Which word is closest in meaning to 上手 in 彼女は料理が上手です?"
+      },
+      "choices": [
+        { "label": "1", "text": "得意", "translation": "good at" },
+        { "label": "2", "text": "下手", "translation": "bad at" },
+        { "label": "3", "text": "静か", "translation": "quiet" },
+        { "label": "4", "text": "早い", "translation": "early / fast" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「上手」はあることをよくできるという意味で、「得意」に近い言葉です。",
+        "en": "上手 means skilled at something, so 得意 is the closest match."
+      }
+    },
+    {
+      "id": "n5-s02-q05",
+      "section": "vocab",
+      "type": "usage",
+      "prompt": {
+        "ja": "「もう」の使い方として自然な文はどれですか。",
+        "en": "Which sentence uses もう naturally?"
+      },
+      "choices": [
+        { "label": "1", "text": "もう昼です。起きましょう。", "translation": "It is already noon. Let's get up." },
+        { "label": "2", "text": "まだ昼です。起きましょう。", "translation": "—" },
+        { "label": "3", "text": "もう彼は来ませんでした。", "translation": "—" },
+        { "label": "4", "text": "もう、彼が来るでしょう。", "translation": "—" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「もう」は「すでに」という意味で、現在の状態に使います。",
+        "en": "もう means already and describes a current state, as in option 1."
+      }
+    },
+    {
+      "id": "n5-s02-q06",
+      "section": "grammar",
+      "type": "sentence-grammar",
+      "prompt": {
+        "ja": "ここに名前を＿ください。",
+        "en": "Please ＿ your name here."
+      },
+      "choices": [
+        { "label": "1", "text": "書いて", "translation": "write (te-form)" },
+        { "label": "2", "text": "書く", "translation": "write (plain)" },
+        { "label": "3", "text": "書いた", "translation": "wrote" },
+        { "label": "4", "text": "書き", "translation": "—" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「名前を書く」のて形は「書いて」です。「〜てください」と組み合わせます。",
+        "en": "The te-form of 名前を書く is 書いて, which combines with 〜てください."
+      }
+    },
+    {
+      "id": "n5-s02-q07",
+      "section": "grammar",
+      "type": "scrambled-sentence",
+      "prompt": {
+        "ja": "来週、友達と ＿ ＿ ★ ＿ 。",
+        "en": "Next week, with a friend, I ＿ ＿ ★ ＿ . Put the four options in order; the ★ slot is the answer."
+      },
+      "choices": [
+        { "label": "1", "text": "映画を", "translation": "a movie" },
+        { "label": "2", "text": "見に", "translation": "to see" },
+        { "label": "3", "text": "行きます", "translation": "go" },
+        { "label": "4", "text": "学校の後で", "translation": "after school" }
+      ],
+      "correctIndex": 1,
+      "explanation": {
+        "ja": "正しい順序は 4→1→2→3 で、「来週、友達と学校の後で映画を見に行きます。」になります。★ には 2「見に」が入ります。",
+        "en": "The correct order is 4→1→2→3: 来週、友達と学校の後で映画を見に行きます。The ★ slot takes option 2, 見に."
+      },
+      "scrambled": {
+        "correctOrder": [3, 0, 1, 2],
+        "starSlotIndex": 2,
+        "completedSentence": "来週、友達と学校の後で映画を見に行きます。"
+      }
+    },
+    {
+      "id": "n5-s02-q08",
+      "section": "grammar",
+      "type": "text-grammar",
+      "prompt": {
+        "ja": "このケーキはおいしいです。でも、少し＿。",
+        "en": "This cake is delicious. But it is a little ＿."
+      },
+      "choices": [
+        { "label": "1", "text": "高いです", "translation": "expensive" },
+        { "label": "2", "text": "高くないです", "translation": "not expensive" },
+        { "label": "3", "text": "安いです", "translation": "cheap" },
+        { "label": "4", "text": "古いです", "translation": "old" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「でも」で反対の内容が続きます。おいしいが値段が高い、という意味で自然です。",
+        "en": "でも introduces a contrasting idea: the cake is tasty, but a little expensive."
+      }
+    },
+    {
+      "id": "n5-s02-q09",
+      "section": "reading",
+      "type": "short-reading",
+      "prompt": {
+        "ja": "家族とどこへ行きましたか。",
+        "en": "Where did the writer go with their family?"
+      },
+      "choices": [
+        { "label": "1", "text": "公園", "translation": "the park" },
+        { "label": "2", "text": "駅", "translation": "the station" },
+        { "label": "3", "text": "学校", "translation": "the school" },
+        { "label": "4", "text": "店", "translation": "the shop" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "最初の文に「家族と公園へ行きました」とあります。",
+        "en": "The first sentence says 家族と公園へ行きました."
+      },
+      "passageId": "n5-s02-passage-01"
+    },
+    {
+      "id": "n5-s02-q10",
+      "section": "reading",
+      "type": "short-reading",
+      "prompt": {
+        "ja": "父は何をしましたか。",
+        "en": "What did the father do?"
+      },
+      "choices": [
+        { "label": "1", "text": "新聞を読みました", "translation": "read a newspaper" },
+        { "label": "2", "text": "写真を撮りました", "translation": "took photos" },
+        { "label": "3", "text": "サッカーをしました", "translation": "played soccer" },
+        { "label": "4", "text": "料理をしました", "translation": "cooked" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「父は新聞を読み、母は写真を撮りました」とあります。",
+        "en": "The text says 父は新聞を読み、母は写真を撮りました."
+      },
+      "passageId": "n5-s02-passage-01"
+    },
+    {
+      "id": "n5-s02-q11",
+      "section": "reading",
+      "type": "short-reading",
+      "prompt": {
+        "ja": "昼ご飯は何を食べましたか。",
+        "en": "What did they eat for lunch?"
+      },
+      "choices": [
+        { "label": "1", "text": "うどん", "translation": "udon noodles" },
+        { "label": "2", "text": "ラーメン", "translation": "ramen" },
+        { "label": "3", "text": "寿司", "translation": "sushi" },
+        { "label": "4", "text": "パン", "translation": "bread" }
+      ],
+      "correctIndex": 0,
+      "explanation": {
+        "ja": "「店でうどんを食べました」とあります。",
+        "en": "The passage says they ate うどん at the shop."
+      },
+      "passageId": "n5-s02-passage-01"
+    },
+    {
+      "id": "n5-s02-q12",
+      "section": "listening",
+      "type": "listening-comprehension",
+      "prompt": {
+        "ja": "店員と女の人が話しています。女の人は、これから何をしますか。",
+        "en": "A clerk and a woman are talking. What will the woman do next?"
+      },
+      "choices": [
+        { "label": "1", "text": "傘を買います", "translation": "buy an umbrella" },
+        { "label": "2", "text": "本を二冊買います", "translation": "buy two books" },
+        { "label": "3", "text": "駅まで歩きます", "translation": "walk to the station" },
+        { "label": "4", "text": "店を出ます", "translation": "leave the shop" }
+      ],
+      "correctIndex": 1,
+      "explanation": {
+        "ja": "女の人は傘は要らないと言って、「本を二冊ください」と注文しています。",
+        "en": "The woman declines the umbrella and says 本を二冊ください, so she will buy two books."
+      },
+      "listening": {
+        "transcript": {
+          "ja": "店員：お客様、雨が降っていますよ。傘はいかがですか。 女人：あ、ありがとう。でも、駅まで近いから、大丈夫です。本を二冊ください。 店員：かしこまりました。",
+          "en": "Clerk: It is raining, ma'am. How about an umbrella? Woman: Oh, thank you. But the station is close, so I am fine. Two books, please. Clerk: Certainly."
+        },
+        "speechLang": "ja-JP",
+        "speechRate": 0.9
+      }
+    }
+  ]
+}
